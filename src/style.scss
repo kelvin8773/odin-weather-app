@@ -1,8 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 20px;
+  background-color: #f9f9fa
 }
 
-h1 {
-  text-align: center;
+.card-weather {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 500px;
+  max-width: 600px;
+  background: #e1ecff;
+  background-image: linear-gradient(to left bottom, #d6eef6, #dff0fa, #e7f3fc, #eff6fe, #f6f9ff)
+}
+
+
+.card-weather .card-body:first-child {
+  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1557323760/weather.svg) no-repeat center;
+  background-size: cover
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500
+}
+
+p {
+  font-size: 16px
+}
+
+.text-gray,
+.card-subtitle,
+.new-accounts ul.chats li.chat-persons a p.joined-date {
+  color: #969696
+}
+
+
+.card-weather .card-body {
+  background: #ffffff
+}
+
+.card-weather .weakly-weather {
+  background: #ffffff;
+  overflow-x: auto
+}
+
+.card-weather .weakly-weather .weakly-weather-item {
+  flex: 0 0 14.28%;
+  border-right: 1px solid #f2f2f2;
+  padding: 1rem;
+  text-align: center
+}
+
+.card-weather .weakly-weather .weakly-weather-item i {
+  font-size: 1.4rem
 }

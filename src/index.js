@@ -14,8 +14,7 @@ import './style.scss';
 
 const Controller = (() => {
   const init = () => {
-    Data.getWeather('London')
-      .then((x) => console.log(x));
+    Data.getWeather('London').then((x) => console.log(x))
   };
 
   return {

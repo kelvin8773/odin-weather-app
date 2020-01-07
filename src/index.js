@@ -11,16 +11,14 @@ import UI from './ui';
 import './style.scss';
 
 const Controller = (() => {
-
   const init = () => {
     Data.getWeather('London')
-      .then(x => console.log(x));
-  }
+      .then((x) => console.log(x));
+  };
 
   return {
     init,
-  }
-
+  };
 })();
 
 Controller.init();

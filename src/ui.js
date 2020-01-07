@@ -1,3 +1,5 @@
+/* eslint-env browser */
+
 const UI = (() => {
   const init = () => {
 

@@ -15,9 +15,9 @@
   <div class="container">
     <h1 class="my-5 text-center">Weather App</h1>
 
-    <div id="main" class="container">
+    <div id="main" class="container d-flex flex-column align-items-center">
 
-      <div class="input-group">
+      <div class="input-group mb-5">
         <input type="text" class="form-control" placeholder="Search your City here ...">
         <div class="input-group-append">
           <button class="btn btn-secondary" type="button">
@@ -26,52 +26,57 @@
         </div>
       </div>
 
-
-      <div class="p-3" id="page-content">
+      <!-- Bootstrap 4 Weather Card Ref - https://bbbootstrap.com/snippets/weather-report-container-card-and-material-design-icons-65572985 -->
+      <div class="" id="page-content">
 
         <!--weather card-->
-        <div class="card card-weather ">
+        <div class="card card-weather">
           <div class="card-body">
             <div class="weather-date-location">
-              <h3>Friday</h3>
-              <p class="text-gray"> <span class="weather-date">25 March, 2019</span> <span
-                  class="weather-location">Sydney, Australia</span> </p>
+              <h3 name="weather-current-weekday">Friday</h3>
+              <p class="text-gray">
+                <span name="weather-date" class="weather-date">25 March, 2019</span>
+                <span name="weather-location" class="weather-location ml-3">Sydney, Australia</span>
+              </p>
             </div>
             <div class="weather-data d-flex pb-5">
               <div class="mr-auto">
-                <h4 class="display-4">32 <span class="symbol">°</span>C</h4>
-                <p> Cloudy </p>
+                <h4 name="weather-temperature" class="display-4">32 <span class="symbol">°</span>C</h4>
+                <h6 name="weather-temperature-feel"> Feel Like 35 <span class="symbol">°</span>C </h6>
+                <!-- <p name="weather-main"> Cloudy </p> -->
+                <p name="weather-description"> Light Rain</p>
               </div>
             </div>
           </div>
 
           <div class="card-body p-0">
-            <div class="d-flex weakly-weather">
-              <div class="weakly-weather-item">
+            <div name="weekly-weather" class="d-flex weekly-weather">
+              <div class="weekly-weather-item">
                 <p class="mb-0"> Sun </p> <i class="mdi mdi-weather-cloudy"></i>
                 <p class="mb-0"> 30° </p>
               </div>
-              <div class="weakly-weather-item">
-                <p class="mb-1"> Mon </p> <i class="mdi mdi-weather-hail"></i>
+              <div class="weekly-weather-item">
+                <p class="mb-1"> Mon </p>
+                <i class="mdi mdi-weather-hail"></i>
                 <p class="mb-0"> 31° </p>
               </div>
-              <div class="weakly-weather-item">
+              <div class="weekly-weather-item">
                 <p class="mb-1"> Tue </p> <i class="mdi mdi-weather-partlycloudy"></i>
                 <p class="mb-0"> 28° </p>
               </div>
-              <div class="weakly-weather-item">
+              <div class="weekly-weather-item">
                 <p class="mb-1"> Wed </p> <i class="mdi mdi-weather-pouring"></i>
                 <p class="mb-0"> 30° </p>
               </div>
-              <div class="weakly-weather-item">
+              <div class="weekly-weather-item">
                 <p class="mb-1"> Thu </p> <i class="mdi mdi-weather-pouring"></i>
                 <p class="mb-0"> 29° </p>
               </div>
-              <div class="weakly-weather-item">
+              <div class="weekly-weather-item">
                 <p class="mb-1"> Fri </p> <i class="mdi mdi-weather-snowy-rainy"></i>
                 <p class="mb-0"> 31° </p>
               </div>
-              <div class="weakly-weather-item">
+              <div class="weekly-weather-item">
                 <p class="mb-1"> Sat </p> <i class="mdi mdi-weather-snowy"></i>
                 <p class="mb-0"> 32° </p>
               </div>

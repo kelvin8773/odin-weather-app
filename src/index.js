@@ -1,15 +1,25 @@
+/* eslint-env browser */
+
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
+import Data from './data';
+import UI from './ui';
+
 import './style.scss';
 
+const Controller = (() => {
+  const init = () => {
+    Data.getWeather('London').then((x) => console.log(x))
+  };
 
-const getWeather = async (city) => {
-  const WEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5/'
-  const url = WEATHER_BASE_URL + `weather?q=${city}` + '&appid=' + `${process.env.OPEN_WEATHER_API_KEY}`;
+  return {
+    init,
+  };
+})();
 
-  const response = await fetch(url, { mode: 'cors' });
-  const data = await response.json();
-  return data;
-};
-
-getWeather('London')
-  .then(x => console.log(x));
-
+Controller.init();

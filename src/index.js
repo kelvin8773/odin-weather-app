@@ -10,12 +10,31 @@ import '@fortawesome/fontawesome-free/js/brands';
 import Data from './data';
 import UI from './ui';
 
-import './style.scss';
+import './scss/style.scss';
 
 const Controller = (() => {
+
+  const update = () => {
+    const city = UI.getCity();
+    if (city) {
+      Data.getToday(city)
+        .then(data => {
+          if (data.code === "200") {
+            UI.updateCard(data);
+          } else {
+            UI.alert('danger', data.error_message.toUpperCase());
+          }
+        })
+    }
+    event.preventDefault();
+  }
+
   const init = () => {
-    Data.getWeather('London').then((x) => console.log(x))
+    const searchForm = document.forms.search;
+    searchForm.addEventListener('submit', update);
   };
+
+
 
   return {
     init,

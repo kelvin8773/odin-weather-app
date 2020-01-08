@@ -13,22 +13,24 @@
 
 <body>
   <div class="container">
+    <div id="alert-bar" class="my-3">
+    </div>
+
     <h1 class="my-5 text-center">Weather App</h1>
 
     <div id="main" class="container d-flex flex-column align-items-center">
 
-      <div class="input-group mb-5">
-        <input type="text" class="form-control" placeholder="Search your City here ...">
+      <form name="search" class="input-group mb-5">
+        <input id="search-input" type="text" class="form-control" placeholder="Search your City here ...">
         <div class="input-group-append">
-          <button class="btn btn-secondary" type="button">
+          <button type="submit" id="search-btn" class="btn btn-secondary" type="button">
             <i class="fa fa-search"></i>
           </button>
         </div>
-      </div>
+      </form>
 
-      <!-- Bootstrap 4 Weather Card Ref - https://bbbootstrap.com/snippets/weather-report-container-card-and-material-design-icons-65572985 -->
+
       <div class="" id="page-content">
-
         <!--weather card-->
         <div class="card card-weather">
           <div class="card-body">
@@ -85,16 +87,11 @@
 
         </div>
         <!--weather card ends-->
-
       </div>
-
     </div>
-
   </div>
 
   <script src="main.js"></script>
-
-
 
 </body>
 

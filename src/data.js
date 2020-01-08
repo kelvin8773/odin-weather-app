@@ -48,12 +48,14 @@ const Data = (() => {
         const oneDay = {
           weather: dataArray[i].weather[0].main,
           description: dataArray[i].weather[0].description,
+          weather_icon: dataArray[i].weather[0].icon,
           temperature: Math.round(dataArray[i].main.temp),
           temperature_feel: Math.round(dataArray[i].main.feels_like),
           temperature_min: Math.round(dataArray[i].main.temp_min),
           temperature_max: Math.round(dataArray[i].main.temp_max),
           des_date: DateConvert.getDate(new Date(dataArray[i].dt_txt)),
           des_weekday: DateConvert.getShortWeekday(new Date(dataArray[i].dt_txt)),
+          city_id: response.city.id,
           city: response.city.name,
           country: response.city.country
         }

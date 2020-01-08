@@ -50,7 +50,7 @@ const UI = (() => {
     date.innerText = data.des_date;
     location.innerText = data.city + ', ' + data.country;
     temperature.innerHTML = `${data.temperature} <span class="symbol">°</span>C`;
-    temperatureFeel.innerHTML = `Feel Like ${data.temperature_feel} <span class="symbol">°</span>C`;
+    temperatureFeel.innerHTML = `<span class="mr-1"> Feel Like </span> ${data.temperature_feel} <span class="symbol">°</span>C`;
     weatherDescription.innerText = data.description.capitalize();
 
   }
@@ -68,7 +68,7 @@ const UI = (() => {
 
       oneDay.innerHTML = `
       <p class="mb-0"> ${weekday} </p> 
-        <i class="mdi mdi-weather-cloudy"></i>
+        <img src="http://openweathermap.org/img/wn/${forecast[i].weather_icon}.png" alt="weather-icon">
       <p class="mb-0"> ${forecast[i].temperature}° </p>`;
 
       weeklyNode.appendChild(oneDay);

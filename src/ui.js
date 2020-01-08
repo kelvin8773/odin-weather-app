@@ -1,6 +1,7 @@
 /* eslint-env browser */
 
 import Validate from './util/validate';
+import './util/utils';
 
 const UI = (() => {
 
@@ -37,8 +38,7 @@ const UI = (() => {
     return city;
   }
 
-  const updateCard = (data) => {
-    console.log(data);
+  const updateCard = data => {
     const weekday = document.getElementsByName('weather-current-weekday')[0];
     const date = document.getElementsByName('weather-date')[0];
     const location = document.getElementsByName('weather-location')[0];
@@ -51,15 +51,35 @@ const UI = (() => {
     location.innerText = data.city + ', ' + data.country;
     temperature.innerHTML = `${data.temperature} <span class="symbol">°</span>C`;
     temperatureFeel.innerHTML = `Feel Like ${data.temperature_feel} <span class="symbol">°</span>C`;
+    weatherDescription.innerText = data.description.capitalize();
 
-    weatherDescription.innerText = data.description;
+  }
 
+  const updateForecast = forecast => {
+    const weeklyNode = document.getElementsByName('weekly-weather')[0];
+    weeklyNode.innerHTML = '';
+
+    for (let i = 0; i < forecast.length; i += 1) {
+      let oneDay = document.createElement('div');
+      let weekday = forecast[i].des_weekday;
+      if (i === 0) weekday = 'Today';
+      if (i === 1) weekday = 'Tomorrow';
+      oneDay.setAttribute("class", "weekly-weather-item");
+
+      oneDay.innerHTML = `
+      <p class="mb-0"> ${weekday} </p> 
+        <i class="mdi mdi-weather-cloudy"></i>
+      <p class="mb-0"> ${forecast[i].temperature}° </p>`;
+
+      weeklyNode.appendChild(oneDay);
+    }
   }
 
   return {
     alert,
     getCity,
-    updateCard
+    updateCard,
+    updateForecast
   };
 })();
 

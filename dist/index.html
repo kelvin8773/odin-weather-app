@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/4.7.95/css/materialdesignicons.min.css">
 
   <title>Weather App</title>
 </head>
@@ -24,7 +23,7 @@
         <input id="search-input" type="text" class="form-control" placeholder="Search your City here ...">
         <div class="input-group-append">
           <button type="submit" id="search-btn" class="btn btn-secondary" type="button">
-            <i class="fa fa-search"></i>
+            <i class="mdi mdi-16px mdi-magnify"></i>
           </button>
         </div>
       </form>
@@ -45,7 +44,6 @@
               <div class="mr-auto">
                 <h4 name="weather-temperature" class="display-4">32 <span class="symbol">°</span>C</h4>
                 <h6 name="weather-temperature-feel"> Feel Like 35 <span class="symbol">°</span>C </h6>
-                <!-- <p name="weather-main"> Cloudy </p> -->
                 <p name="weather-description"> Light Rain</p>
               </div>
             </div>
@@ -54,16 +52,16 @@
           <div class="card-body p-0">
             <div name="weekly-weather" class="d-flex weekly-weather">
               <div class="weekly-weather-item">
-                <p class="mb-0"> Sun </p> <i class="mdi mdi-weather-cloudy"></i>
+                <p class="mb-0"> Today </p> <i class="mdi mdi-weather-cloudy"></i>
                 <p class="mb-0"> 30° </p>
               </div>
               <div class="weekly-weather-item">
-                <p class="mb-1"> Mon </p>
+                <p class="mb-1"> Tomorrow </p>
                 <i class="mdi mdi-weather-hail"></i>
                 <p class="mb-0"> 31° </p>
               </div>
               <div class="weekly-weather-item">
-                <p class="mb-1"> Tue </p> <i class="mdi mdi-weather-partlycloudy"></i>
+                <p class="mb-1"> Tue </p> <i class="mdi mdi-weather-partly-cloudy"></i>
                 <p class="mb-0"> 28° </p>
               </div>
               <div class="weekly-weather-item">
@@ -73,14 +71,6 @@
               <div class="weekly-weather-item">
                 <p class="mb-1"> Thu </p> <i class="mdi mdi-weather-pouring"></i>
                 <p class="mb-0"> 29° </p>
-              </div>
-              <div class="weekly-weather-item">
-                <p class="mb-1"> Fri </p> <i class="mdi mdi-weather-snowy-rainy"></i>
-                <p class="mb-0"> 31° </p>
-              </div>
-              <div class="weekly-weather-item">
-                <p class="mb-1"> Sat </p> <i class="mdi mdi-weather-snowy"></i>
-                <p class="mb-0"> 32° </p>
               </div>
             </div>
           </div>

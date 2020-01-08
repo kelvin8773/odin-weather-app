@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
 
+// @import '@mdi/font/scss/materialdesignicons';
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 20px;
@@ -55,7 +57,7 @@ p {
 }
 
 .card-weather .weekly-weather .weekly-weather-item {
-  flex: 0 0 14.28%;
+  flex: 0 0 19.46%;
   border-right: 1px solid #f2f2f2;
   padding: 1rem;
   text-align: center

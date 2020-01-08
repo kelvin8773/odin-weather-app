@@ -2,13 +2,10 @@
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
-import '@fortawesome/fontawesome-free/js/brands';
 
 import Data from './data';
 import UI from './ui';
+import './util/utils';
 
 import './scss/style.scss';
 
@@ -21,10 +18,19 @@ const Controller = (() => {
         .then(data => {
           if (data.code === "200") {
             UI.updateCard(data);
+
+            Data.getFiveDays(city)
+              .then(data => {
+                console.log(data);
+                UI.updateForecast(data);
+              });
+
           } else {
-            UI.alert('danger', data.error_message.toUpperCase());
+            UI.alert('danger', data.error_message.capitalize());
           }
-        })
+        });
+
+
     }
     event.preventDefault();
   }
@@ -33,8 +39,6 @@ const Controller = (() => {
     const searchForm = document.forms.search;
     searchForm.addEventListener('submit', update);
   };
-
-
 
   return {
     init,

@@ -1,13 +1,13 @@
 import { format, addHours } from 'date-fns';
 
 const DateConvert = (() => {
-  const getDate = (date) => format(date, 'PPpp');
+  const getDate = date => format(date, 'PPpp');
 
-  const getWeekday = (date) => format(date, 'cccc');
+  const getWeekday = date => format(date, 'cccc');
 
-  const getShortWeekday = (date) => format(date, 'ccc');
+  const getShortWeekday = date => format(date, 'ccc');
 
-  const getDesLocalTime = (desOffsetUTC) => {
+  const getDesLocalTime = desOffsetUTC => {
     const localNow = new Date();
     const localOffsetUTC = localNow.getTimezoneOffset() / 60;
 

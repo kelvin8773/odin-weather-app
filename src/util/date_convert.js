@@ -7,7 +7,7 @@ const DateConvert = (() => {
 
   const getShortWeekday = date => format(date, 'ccc');
 
-  const getDesLocalTime = desOffsetUTC => {
+  const getDesLocalTime = (desOffsetUTC) => {
     const localNow = new Date();
     const localOffsetUTC = localNow.getTimezoneOffset() / 60;
 

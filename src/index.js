@@ -13,16 +13,17 @@ const Controller = (() => {
     const city = UI.getCity();
     if (city) {
       Data.getNow(city)
-        .then((data) => {
-          if (data.code === '200') {
-            UI.updateNow(data);
+        .then((now) => {
+          if (now.code === '200') {
+            UI.updateNow(now);
+            console.log(now);
 
             Data.getFiveDays(city)
-              .then((data) => {
-                UI.updateForecast(data);
+              .then((forecast) => {
+                UI.updateForecast(forecast);
               });
           } else {
-            UI.alert('danger', data.error_message);
+            UI.alert('danger', now.error_message);
           }
         });
     }

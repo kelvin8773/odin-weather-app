@@ -1,6 +1,6 @@
 import { format, addHours } from 'date-fns';
 
-const DateConvert = (() => {
+const DateFns = (() => {
   const getDate = date => format(date, 'PPpp');
 
   const getWeekday = date => format(date, 'cccc');
@@ -14,12 +14,19 @@ const DateConvert = (() => {
     return addHours(localNow, localOffsetUTC + desOffsetUTC);
   };
 
+  const checkNight = date => {
+    const hour = date.getHours();
+    if (hour >= 6 && hour <= 18) return false;
+    return true;
+  }
+
   return {
     getDate,
     getWeekday,
     getShortWeekday,
     getDesLocalTime,
+    checkNight,
   };
 })();
 
-export default DateConvert;
+export default DateFns;

@@ -1,6 +1,7 @@
 /* eslint-env browser */
 
 import Validate from './util/validate';
+import Image from './util/image';
 
 const UI = (() => {
   const alert = (type, msg) => {
@@ -58,6 +59,10 @@ const UI = (() => {
     temperatureFeel.innerHTML = `<span class="mr-1"> Feel Like </span> ${data.temperature_feel} <span class="symbol">°</span>C`;
     weatherDescription.innerText = data.description;
     weatherIconNow.src = `http://openweathermap.org/img/wn/${data.weather_icon}@2x.png`;
+
+    const weatherNowCard = document.getElementsByName('weather-now-card')[0];
+    const weatherImg = Image.getWeatherImg(data.weather_id, data.night);
+    weatherNowCard.style.backgroundImage = `url(${weatherImg})`;
   };
 
   const updateForecast = (forecast) => {

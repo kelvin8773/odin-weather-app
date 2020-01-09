@@ -1,7 +1,7 @@
 /* eslint-env browser */
 
 import Weather from './util/weather_api';
-import DateConvert from './util/date_convert';
+import DateFns from './util/date_fns';
 
 const Data = (() => {
   const getNow = async (input) => {
@@ -9,10 +9,11 @@ const Data = (() => {
     if (response.cod === 200) {
       console.log(response);
       const desOffsetHours = response.timezone / (60 * 60);
-      const desLocalTime = DateConvert.getDesLocalTime(desOffsetHours);
+      const desLocalTime = DateFns.getDesLocalTime(desOffsetHours);
 
       return {
         code: response.cod.toString(),
+        weather_id: response.weather[0].id,
         weather: response.weather[0].main,
         description: response.weather[0].description,
         weather_icon: response.weather[0].icon,
@@ -27,8 +28,9 @@ const Data = (() => {
         clouds: response.clouds.all,
         city: response.name,
         country: response.sys.country,
-        des_date: DateConvert.getDate(desLocalTime),
-        des_weekday: DateConvert.getWeekday(desLocalTime),
+        des_date: DateFns.getDate(desLocalTime),
+        des_weekday: DateFns.getWeekday(desLocalTime),
+        night: DateFns.checkNight(desLocalTime),
       };
     }
 
@@ -53,8 +55,8 @@ const Data = (() => {
           temperature_feel: Math.round(dataArray[i].main.feels_like),
           temperature_min: Math.round(dataArray[i].main.temp_min),
           temperature_max: Math.round(dataArray[i].main.temp_max),
-          des_date: DateConvert.getDate(new Date(dataArray[i].dt_txt)),
-          des_weekday: DateConvert.getShortWeekday(new Date(dataArray[i].dt_txt)),
+          des_date: DateFns.getDate(new Date(dataArray[i].dt_txt)),
+          des_weekday: DateFns.getShortWeekday(new Date(dataArray[i].dt_txt)),
           city_id: response.city.id,
           city: response.city.name,
           country: response.city.country,

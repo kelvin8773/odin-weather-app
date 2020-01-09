@@ -4,11 +4,9 @@ import Weather from './util/weather_api';
 import DateConvert from './util/date_convert';
 
 const Data = (() => {
-
-  const getNow = async input => {
+  const getNow = async (input) => {
     const response = await Weather.fetchData(input, 'C', 1);
     if (response.cod === 200) {
-      console.log(response);
       const desOffsetHours = response.timezone / (60 * 60);
       const desLocalTime = DateConvert.getDesLocalTime(desOffsetHours);
 
@@ -30,19 +28,18 @@ const Data = (() => {
         country: response.sys.country,
         des_date: DateConvert.getDate(desLocalTime),
         des_weekday: DateConvert.getWeekday(desLocalTime),
-      }
+      };
     }
 
     return {
       code: response.cod,
-      error_message: response.message
-    }
-  }
+      error_message: response.message,
+    };
+  };
 
-  const getFiveDays = async input => {
+  const getFiveDays = async (input) => {
     const response = await await Weather.fetchData(input, 'C', 5);
-    if (response.cod === "200") {
-      console.log(response);
+    if (response.cod === '200') {
       const forecast = [];
       const dataArray = response.list;
 
@@ -59,18 +56,18 @@ const Data = (() => {
           des_weekday: DateConvert.getShortWeekday(new Date(dataArray[i].dt_txt)),
           city_id: response.city.id,
           city: response.city.name,
-          country: response.city.country
-        }
+          country: response.city.country,
+        };
         forecast.push(oneDay);
       }
       return forecast;
     }
     return response;
-  }
+  };
 
   return {
     getNow,
-    getFiveDays
+    getFiveDays,
   };
 })();
 

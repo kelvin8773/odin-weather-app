@@ -1,16 +1,14 @@
 /* eslint-env browser */
 
 import Validate from './util/validate';
-import './util/utils';
 
 const UI = (() => {
-
   const alert = (type, msg) => {
     const alertBar = document.getElementById('alert-bar');
 
-    const alertClass = 'alert-' + type;
+    const alertClass = `alert-${type}`;
     alertBar.innerHTML = `
-      <div id=${alertClass} class="alert ${alertClass} alert-dismissible fade show" role="alert">
+      <div id=${alertClass} class="alert ${alertClass} alert-dismissible fade show text-capitalize" role="alert">
         ${msg}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -20,7 +18,7 @@ const UI = (() => {
     window.setTimeout(() => {
       document.getElementById(alertClass).remove();
     }, 2500);
-  }
+  };
 
   const getCity = () => {
     let city = '';
@@ -32,13 +30,13 @@ const UI = (() => {
     } else {
       alert('warning', 'Please input a valid City Name!');
       city = null;
-    };
+    }
 
     searchForm.reset();
     return city;
-  }
+  };
 
-  const updateNow = data => {
+  const updateNow = (data) => {
     const weekday = document.getElementsByName('weather-current-weekday')[0];
     const date = document.getElementsByName('weather-date')[0];
     const location = document.getElementsByName('weather-location')[0];
@@ -55,24 +53,23 @@ const UI = (() => {
 
     weekday.innerText = data.des_weekday;
     date.innerText = data.des_date;
-    location.innerText = data.city + ', ' + data.country;
+    location.innerText = `${data.city}, ${data.country}`;
     temperature.innerHTML = `${data.temperature} <span class="symbol">°</span>C`;
     temperatureFeel.innerHTML = `<span class="mr-1"> Feel Like </span> ${data.temperature_feel} <span class="symbol">°</span>C`;
-    weatherDescription.innerText = data.description.capitalize();
-    weatherIconNow.src = `http://openweathermap.org/img/wn/${data.weather_icon}@2x.png`
+    weatherDescription.innerText = data.description;
+    weatherIconNow.src = `http://openweathermap.org/img/wn/${data.weather_icon}@2x.png`;
+  };
 
-  }
-
-  const updateForecast = forecast => {
+  const updateForecast = (forecast) => {
     const weeklyNode = document.getElementsByName('weekly-weather')[0];
     weeklyNode.innerHTML = '';
 
     for (let i = 0; i < forecast.length; i += 1) {
-      let oneDay = document.createElement('div');
+      const oneDay = document.createElement('div');
       let weekday = forecast[i].des_weekday;
       if (i === 0) weekday = 'Today';
       if (i === 1) weekday = 'Tomorrow';
-      oneDay.setAttribute("class", "weekly-weather-item");
+      oneDay.setAttribute('class', 'weekly-weather-item');
 
       oneDay.innerHTML = `
       <p class="mb-0"> ${weekday} </p> 
@@ -81,13 +78,13 @@ const UI = (() => {
 
       weeklyNode.appendChild(oneDay);
     }
-  }
+  };
 
   return {
     alert,
     getCity,
     updateNow,
-    updateForecast
+    updateForecast,
   };
 })();
 

@@ -5,35 +5,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Data from './data';
 import UI from './ui';
-import './util/utils';
 
 import './scss/style.scss';
 
 const Controller = (() => {
-
-  const update = () => {
+  const update = (event) => {
     const city = UI.getCity();
     if (city) {
       Data.getNow(city)
-        .then(data => {
-          if (data.code === "200") {
+        .then((data) => {
+          if (data.code === '200') {
             UI.updateNow(data);
 
             Data.getFiveDays(city)
-              .then(data => {
-                console.log(data);
+              .then((data) => {
                 UI.updateForecast(data);
               });
-
           } else {
-            UI.alert('danger', data.error_message.capitalize());
+            UI.alert('danger', data.error_message);
           }
         });
-
-
     }
     event.preventDefault();
-  }
+  };
 
   const init = () => {
     const searchForm = document.forms.search;

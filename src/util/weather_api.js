@@ -15,16 +15,15 @@ const Weather = (() => {
     let queryString = GET_TODAY;
     if (days === 5) queryString = GET_5DAYS;
     if (unit === 'F') unitString = UNIT_IMPERIAL;
-    let url = BASE_URL + queryString + unitString + API;
+    const url = BASE_URL + queryString + unitString + API;
 
     const response = await fetch(url, { mode: 'cors' });
-    return await response.json();
-
+    return response.json();
   };
 
   return {
-    fetchData
-  }
+    fetchData,
+  };
 })();
 
 export default Weather;

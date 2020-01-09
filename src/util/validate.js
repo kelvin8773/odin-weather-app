@@ -10,12 +10,12 @@ const Validate = (() => {
     if (test === 'country') return value.length !== 0 && countryRegExp.test(value);
     if (test === 'zipCode') return value.length !== 0 && zipCodeRegExp.test(value);
     if (test === 'password') return value.length !== 0 && passwordRegExp.test(value);
-  }
+    return false;
+  };
 
   return {
     check,
-  }
-
+  };
 })();
 
 export default Validate;

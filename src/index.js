@@ -14,10 +14,10 @@ const Controller = (() => {
   const update = () => {
     const city = UI.getCity();
     if (city) {
-      Data.getToday(city)
+      Data.getNow(city)
         .then(data => {
           if (data.code === "200") {
-            UI.updateCard(data);
+            UI.updateNow(data);
 
             Data.getFiveDays(city)
               .then(data => {

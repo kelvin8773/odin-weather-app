@@ -5,7 +5,7 @@ import DateConvert from './util/date_convert';
 
 const Data = (() => {
 
-  const getToday = async input => {
+  const getNow = async input => {
     const response = await Weather.fetchData(input, 'C', 1);
     if (response.cod === 200) {
       console.log(response);
@@ -16,6 +16,7 @@ const Data = (() => {
         code: response.cod.toString(),
         weather: response.weather[0].main,
         description: response.weather[0].description,
+        weather_icon: response.weather[0].icon,
         temperature: Math.round(response.main.temp),
         temperature_feel: Math.round(response.main.feels_like),
         temperature_min: response.main.temp_min,
@@ -24,6 +25,7 @@ const Data = (() => {
         humidity: response.main.humidity,
         wind_speed: response.wind.speed,
         wind_degree: response.wind.deg,
+        clouds: response.clouds.all,
         city: response.name,
         country: response.sys.country,
         des_date: DateConvert.getDate(desLocalTime),
@@ -67,7 +69,7 @@ const Data = (() => {
   }
 
   return {
-    getToday,
+    getNow,
     getFiveDays
   };
 })();

@@ -35,17 +35,50 @@
           <div class="card-body">
             <div class="weather-date-location">
               <h3 name="weather-current-weekday">Friday</h3>
-              <p class="text-gray">
-                <span name="weather-date" class="weather-date">25 March, 2019</span>
-                <span name="weather-location" class="weather-location ml-3">Sydney, Australia</span>
+              <p class="text-gray mb-0">
+                <span name="weather-date" class="weather-date">24 December, 2019</span>
+                <span name="weather-location" class="weather-location ml-2">Sydney, AU</span>
               </p>
             </div>
-            <div class="weather-data d-flex pb-5">
+            <div class="weather-data d-flex flex-column">
               <div class="mr-auto">
-                <h4 name="weather-temperature" class="display-4">32 <span class="symbol">°</span>C</h4>
-                <h6 name="weather-temperature-feel"> Feel Like 35 <span class="symbol">°</span>C </h6>
-                <p name="weather-description"> Light Rain</p>
+                <div class="d-flex align-items-end">
+                  <img name="weather-icon-now" class="weather-icon-now"
+                    src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather-icon-now">
+                  <h4 name="weather-temperature" class="display-3">18 <span class="symbol">°</span>C
+                  </h4>
+                </div>
+
+                <h6 name="weather-temperature-feel"> Feel Like 14 <span class="symbol">°</span>C </h6>
+                <p name="weather-description">Sunny</p>
               </div>
+
+              <div name="weather-detail-data" class="d-flex justify-content-around">
+                <div>
+                  <h6 class="text-light font-weight-bolder">Wind</h6>
+                  <h2 name="weather-wind" class="text-gray">18</h2>
+                  <p class="text-gray">M/S</p>
+                </div>
+
+                <div>
+                  <h6 class="text-light font-weight-bolder">Clouds</h6>
+                  <h2 name="weather-clouds" class="text-gray">90</h2>
+                  <p class="text-gray">%</p>
+                </div>
+
+                <div>
+                  <h6 class="text-light font-weight-bolder">Humidity</h6>
+                  <h2 name="weather-humidity" class="text-gray">60</h2>
+                  <p class="text-gray">%</p>
+                </div>
+
+                <div>
+                  <h6 class="text-light font-weight-bolder">Pressure</h6>
+                  <h2 name="weather-pressure" class="text-gray">1260</h2>
+                  <p class="text-gray">hPa</p>
+                </div>
+              </div>
+
             </div>
           </div>
 

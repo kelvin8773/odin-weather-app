@@ -38,13 +38,20 @@ const UI = (() => {
     return city;
   }
 
-  const updateCard = data => {
+  const updateNow = data => {
     const weekday = document.getElementsByName('weather-current-weekday')[0];
     const date = document.getElementsByName('weather-date')[0];
     const location = document.getElementsByName('weather-location')[0];
     const temperature = document.getElementsByName('weather-temperature')[0];
     const temperatureFeel = document.getElementsByName('weather-temperature-feel')[0];
     const weatherDescription = document.getElementsByName('weather-description')[0];
+    const weatherIconNow = document.getElementsByName('weather-icon-now')[0];
+
+    document.getElementsByName('weather-wind')[0].innerText = data.wind_speed;
+    document.getElementsByName('weather-clouds')[0].innerText = data.clouds;
+    document.getElementsByName('weather-humidity')[0].innerText = data.humidity;
+    document.getElementsByName('weather-pressure')[0].innerText = data.pressure;
+
 
     weekday.innerText = data.des_weekday;
     date.innerText = data.des_date;
@@ -52,6 +59,7 @@ const UI = (() => {
     temperature.innerHTML = `${data.temperature} <span class="symbol">°</span>C`;
     temperatureFeel.innerHTML = `<span class="mr-1"> Feel Like </span> ${data.temperature_feel} <span class="symbol">°</span>C`;
     weatherDescription.innerText = data.description.capitalize();
+    weatherIconNow.src = `http://openweathermap.org/img/wn/${data.weather_icon}@2x.png`
 
   }
 
@@ -78,7 +86,7 @@ const UI = (() => {
   return {
     alert,
     getCity,
-    updateCard,
+    updateNow,
     updateForecast
   };
 })();

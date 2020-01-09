@@ -15,7 +15,7 @@
     <div id="alert-bar" class="my-3">
     </div>
 
-    <h1 class="my-5 text-center">Weather App</h1>
+    <!-- <h1 class="my-5 text-center">Weather App</h1> -->
 
     <div id="main" class="container d-flex flex-column align-items-center">
 
@@ -32,58 +32,57 @@
       <div class="shadow mb-5" id="page-content">
         <!--weather card-->
         <div class="card card-weather">
-          <div name="weather-now-card" class="card-body">
+          <div name="weather-now-card" class="card-body text-night-color">
             <div class="weather-date-location">
-              <h3 name="weather-current-weekday" class="text-lightgrey">Friday</h3>
-              <p class="text-gray mb-0">
+              <div class="d-flex justify-content-start align-items-end">
+                <h1 name="weather-city" class="mr-2 mb-1">Sydney</h1>
+                <h5 name="weather-country">AU</h5>
+              </div>
+              <p class="mb-5">
+                <span name="weather-current-weekday" class="mr-1">Friday,</span>
                 <span name="weather-date" class="weather-date">24 December, 2019</span>
-                <span name="weather-location" class="weather-location ml-2">Sydney, AU</span>
               </p>
             </div>
             <div class="weather-data d-flex flex-column">
               <div class="mr-auto">
-                <div class="d-flex align-items-end">
-                  <img name="weather-icon-now" class="weather-icon-now"
-                    src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather-icon-now">
-                  <h4 name="weather-temperature" class="display-3">18 <span class="symbol">°</span>C
-                  </h4>
-                </div>
+                <h4 name="weather-temperature" class="display-3">18 <span class="symbol">°</span>C
+                </h4>
 
-                <h6 name="weather-temperature-feel" class="text-lightgrey"> Feel Like 14 <span class="symbol">°</span>C
+                <h6 name="weather-temperature-feel"> Feel Like 14 <span class="symbol">°</span>C
                 </h6>
-                <p name="weather-description" class="text-capitalize text-lightgrey">overcast clouds</p>
+                <p name="weather-description" class="text-capitalize">overcast clouds</p>
               </div>
 
               <div name="weather-detail-data" class="d-flex justify-content-around">
                 <div>
-                  <h6 class="text-light font-weight-bolder">Wind</h6>
-                  <h2 name="weather-wind" class="text-gray">18</h2>
-                  <p class="text-gray">M/S</p>
+                  <h6 class="font-weight-bolder">Wind</h6>
+                  <h2 name="weather-wind">18</h2>
+                  <p>M/S</p>
                 </div>
 
                 <div>
-                  <h6 class="text-light font-weight-bolder">Clouds</h6>
-                  <h2 name="weather-clouds" class="text-gray">90</h2>
-                  <p class="text-gray">%</p>
+                  <h6 class="font-weight-bolder">Clouds</h6>
+                  <h2 name="weather-clouds">90</h2>
+                  <p>%</p>
                 </div>
 
                 <div>
-                  <h6 class="text-light font-weight-bolder">Humidity</h6>
-                  <h2 name="weather-humidity" class="text-gray">60</h2>
-                  <p class="text-gray">%</p>
+                  <h6 class="font-weight-bolder">Humidity</h6>
+                  <h2 name="weather-humidity">60</h2>
+                  <p>%</p>
                 </div>
 
                 <div>
-                  <h6 class="text-light font-weight-bolder">Pressure</h6>
-                  <h2 name="weather-pressure" class="text-gray">1260</h2>
-                  <p class="text-gray">hPa</p>
+                  <h6 class="font-weight-bolder">Pressure</h6>
+                  <h2 name="weather-pressure">1260</h2>
+                  <p>hPa</p>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <div class="card-body p-0">
+          <div name="weather-forecast-card" class="card-body p-0">
             <div name="weekly-weather" class="d-flex weekly-weather">
               <div class="weekly-weather-item">
                 <p class="mb-0"> Today </p>

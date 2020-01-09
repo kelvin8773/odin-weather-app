@@ -40,12 +40,6 @@ p {
   background-size: cover;
 }
 
-.text-gray,
-.card-subtitle,
-.new-accounts ul.chats li.chat-persons a p.joined-date {
-  color: #cbcaca
-}
-
 .card-weather .card-body {
   background: #ffffff
 }
@@ -62,21 +56,22 @@ p {
   text-align: center
 }
 
-.card-weather .weekly-weather .weekly-weather-item i {
-  font-size: 1.4rem
-}
 
 .display-3 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 56px;
-  font-weight: 900;
-  color: rgb(211, 212, 211);
+  font-size: 52px;
+  font-weight: 600;
 }
 
 .weather-icon-now {
   width: 140px;
 }
 
-.text-lightgrey {
-  color: lightgray;
+
+.text-day-color {
+  color: rgb(165, 165, 165);
+}
+
+.text-night-color {
+  color: #f2f2f2;
 }

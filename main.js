@@ -2828,6 +2828,114 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
+/***/ "./src/assets/image/clear_day.png":
+/*!****************************************!*\
+  !*** ./src/assets/image/clear_day.png ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"e2f93e1127d081dd52d4400ec043ba8d.png\");\n\n//# sourceURL=webpack:///./src/assets/image/clear_day.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/clear_night.png":
+/*!******************************************!*\
+  !*** ./src/assets/image/clear_night.png ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"98f2f37c820078b7b9360d575ba6a84e.png\");\n\n//# sourceURL=webpack:///./src/assets/image/clear_night.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/clouds_day.png":
+/*!*****************************************!*\
+  !*** ./src/assets/image/clouds_day.png ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"5f26f60ed3af4289aca0246663bfe1ef.png\");\n\n//# sourceURL=webpack:///./src/assets/image/clouds_day.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/clouds_night.png":
+/*!*******************************************!*\
+  !*** ./src/assets/image/clouds_night.png ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"479bf96a04331dbabd422d80545dacdc.png\");\n\n//# sourceURL=webpack:///./src/assets/image/clouds_night.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/drizzle_day.png":
+/*!******************************************!*\
+  !*** ./src/assets/image/drizzle_day.png ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"f55b0f7b8c4b1ece47f8a611f2d761e3.png\");\n\n//# sourceURL=webpack:///./src/assets/image/drizzle_day.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/drizzle_night.png":
+/*!********************************************!*\
+  !*** ./src/assets/image/drizzle_night.png ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"b52e9bbb3bef3ffa157c3c8419270d3d.png\");\n\n//# sourceURL=webpack:///./src/assets/image/drizzle_night.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/fog_day.png":
+/*!**************************************!*\
+  !*** ./src/assets/image/fog_day.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"eaaeb7376b07fd615a3007d8dc5d428f.png\");\n\n//# sourceURL=webpack:///./src/assets/image/fog_day.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/fog_night1.png":
+/*!*****************************************!*\
+  !*** ./src/assets/image/fog_night1.png ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"e51b7ccd74fd43ff542d912234f8b75b.png\");\n\n//# sourceURL=webpack:///./src/assets/image/fog_night1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/rain_day.png":
+/*!***************************************!*\
+  !*** ./src/assets/image/rain_day.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"7a4bcfc03bb8bbb7dd73ff95cb7d3eb4.png\");\n\n//# sourceURL=webpack:///./src/assets/image/rain_day.png?");
+
+/***/ }),
+
 /***/ "./src/assets/image/rain_night.png":
 /*!*****************************************!*\
   !*** ./src/assets/image/rain_night.png ***!
@@ -2840,6 +2948,54 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
+/***/ "./src/assets/image/snow_day.png":
+/*!***************************************!*\
+  !*** ./src/assets/image/snow_day.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"107218210d3030efd8c56a6c5809b59c.png\");\n\n//# sourceURL=webpack:///./src/assets/image/snow_day.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/snow_night.png":
+/*!*****************************************!*\
+  !*** ./src/assets/image/snow_night.png ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"8fa0e2510ba85a01f994bddef424ea4e.png\");\n\n//# sourceURL=webpack:///./src/assets/image/snow_night.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/thunderstorm_day.png":
+/*!***********************************************!*\
+  !*** ./src/assets/image/thunderstorm_day.png ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"e9ba953682641940cf2651bd6ab3ce44.png\");\n\n//# sourceURL=webpack:///./src/assets/image/thunderstorm_day.png?");
+
+/***/ }),
+
+/***/ "./src/assets/image/thunderstorm_night-1.png":
+/*!***************************************************!*\
+  !*** ./src/assets/image/thunderstorm_night-1.png ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"c370ea98e03f2c416983631e4a28fdb9.png\");\n\n//# sourceURL=webpack:///./src/assets/image/thunderstorm_night-1.png?");
+
+/***/ }),
+
 /***/ "./src/data.js":
 /*!*********************!*\
   !*** ./src/data.js ***!
@@ -2848,7 +3004,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_weather_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/weather_api */ \"./src/util/weather_api.js\");\n/* harmony import */ var _util_date_convert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/date_convert */ \"./src/util/date_convert.js\");\n/* eslint-env browser */\n\n\n\n\nconst Data = (() => {\n  const getNow = async (input) => {\n    const response = await _util_weather_api__WEBPACK_IMPORTED_MODULE_0__[\"default\"].fetchData(input, 'C', 1);\n    if (response.cod === 200) {\n      console.log(response);\n      const desOffsetHours = response.timezone / (60 * 60);\n      const desLocalTime = _util_date_convert__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getDesLocalTime(desOffsetHours);\n\n      return {\n        code: response.cod.toString(),\n        weather: response.weather[0].main,\n        description: response.weather[0].description,\n        weather_icon: response.weather[0].icon,\n        temperature: Math.round(response.main.temp),\n        temperature_feel: Math.round(response.main.feels_like),\n        temperature_min: response.main.temp_min,\n        temperature_max: response.main.temp_max,\n        pressure: response.main.pressure,\n        humidity: response.main.humidity,\n        wind_speed: response.wind.speed,\n        wind_degree: response.wind.deg,\n        clouds: response.clouds.all,\n        city: response.name,\n        country: response.sys.country,\n        des_date: _util_date_convert__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getDate(desLocalTime),\n        des_weekday: _util_date_convert__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getWeekday(desLocalTime),\n      };\n    }\n\n    return {\n      code: response.cod,\n      error_message: response.message,\n    };\n  };\n\n  const getFiveDays = async (input) => {\n    const response = await await _util_weather_api__WEBPACK_IMPORTED_MODULE_0__[\"default\"].fetchData(input, 'C', 5);\n    if (response.cod === '200') {\n      const forecast = [];\n      const dataArray = response.list;\n\n      for (let i = 0; i < dataArray.length; i += 8) {\n        const oneDay = {\n          weather: dataArray[i].weather[0].main,\n          description: dataArray[i].weather[0].description,\n          weather_icon: dataArray[i].weather[0].icon,\n          temperature: Math.round(dataArray[i].main.temp),\n          temperature_feel: Math.round(dataArray[i].main.feels_like),\n          temperature_min: Math.round(dataArray[i].main.temp_min),\n          temperature_max: Math.round(dataArray[i].main.temp_max),\n          des_date: _util_date_convert__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getDate(new Date(dataArray[i].dt_txt)),\n          des_weekday: _util_date_convert__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getShortWeekday(new Date(dataArray[i].dt_txt)),\n          city_id: response.city.id,\n          city: response.city.name,\n          country: response.city.country,\n        };\n        forecast.push(oneDay);\n      }\n      return forecast;\n    }\n    return response;\n  };\n\n  return {\n    getNow,\n    getFiveDays,\n  };\n})();\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Data);\n\n\n//# sourceURL=webpack:///./src/data.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_weather_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/weather_api */ \"./src/util/weather_api.js\");\n/* harmony import */ var _util_date_fns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/date_fns */ \"./src/util/date_fns.js\");\n/* eslint-env browser */\n\n\n\n\nconst Data = (() => {\n  const getNow = async (input) => {\n    const response = await _util_weather_api__WEBPACK_IMPORTED_MODULE_0__[\"default\"].fetchData(input, 'C', 1);\n    if (response.cod === 200) {\n      console.log(response);\n      const desOffsetHours = response.timezone / (60 * 60);\n      const desLocalTime = _util_date_fns__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getDesLocalTime(desOffsetHours);\n\n      return {\n        code: response.cod.toString(),\n        weather_id: response.weather[0].id,\n        weather: response.weather[0].main,\n        description: response.weather[0].description,\n        weather_icon: response.weather[0].icon,\n        temperature: Math.round(response.main.temp),\n        temperature_feel: Math.round(response.main.feels_like),\n        temperature_min: response.main.temp_min,\n        temperature_max: response.main.temp_max,\n        pressure: response.main.pressure,\n        humidity: response.main.humidity,\n        wind_speed: response.wind.speed,\n        wind_degree: response.wind.deg,\n        clouds: response.clouds.all,\n        city: response.name,\n        country: response.sys.country,\n        des_date: _util_date_fns__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getDate(desLocalTime),\n        des_weekday: _util_date_fns__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getWeekday(desLocalTime),\n        night: _util_date_fns__WEBPACK_IMPORTED_MODULE_1__[\"default\"].checkNight(desLocalTime),\n      };\n    }\n\n    return {\n      code: response.cod,\n      error_message: response.message,\n    };\n  };\n\n  const getFiveDays = async (input) => {\n    const response = await await _util_weather_api__WEBPACK_IMPORTED_MODULE_0__[\"default\"].fetchData(input, 'C', 5);\n    if (response.cod === '200') {\n      const forecast = [];\n      const dataArray = response.list;\n\n      for (let i = 0; i < dataArray.length; i += 8) {\n        const oneDay = {\n          weather: dataArray[i].weather[0].main,\n          description: dataArray[i].weather[0].description,\n          weather_icon: dataArray[i].weather[0].icon,\n          temperature: Math.round(dataArray[i].main.temp),\n          temperature_feel: Math.round(dataArray[i].main.feels_like),\n          temperature_min: Math.round(dataArray[i].main.temp_min),\n          temperature_max: Math.round(dataArray[i].main.temp_max),\n          des_date: _util_date_fns__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getDate(new Date(dataArray[i].dt_txt)),\n          des_weekday: _util_date_fns__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getShortWeekday(new Date(dataArray[i].dt_txt)),\n          city_id: response.city.id,\n          city: response.city.name,\n          country: response.city.country,\n        };\n        forecast.push(oneDay);\n      }\n      return forecast;\n    }\n    return response;\n  };\n\n  return {\n    getNow,\n    getFiveDays,\n  };\n})();\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Data);\n\n\n//# sourceURL=webpack:///./src/data.js?");
 
 /***/ }),
 
@@ -2860,7 +3016,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data */ \"./src/data.js\");\n/* harmony import */ var _ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ui */ \"./src/ui.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* eslint-env browser */\n\n\n\n\n\n\n\n\n\nconst Controller = (() => {\n  const update = (event) => {\n    const city = _ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"].getCity();\n    if (city) {\n      _data__WEBPACK_IMPORTED_MODULE_2__[\"default\"].getNow(city)\n        .then((data) => {\n          if (data.code === '200') {\n            _ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"].updateNow(data);\n\n            _data__WEBPACK_IMPORTED_MODULE_2__[\"default\"].getFiveDays(city)\n              .then((data) => {\n                _ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"].updateForecast(data);\n              });\n          } else {\n            _ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"].alert('danger', data.error_message);\n          }\n        });\n    }\n    event.preventDefault();\n  };\n\n  const init = () => {\n    const searchForm = document.forms.search;\n    searchForm.addEventListener('submit', update);\n  };\n\n  return {\n    init,\n  };\n})();\n\nController.init();\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data */ \"./src/data.js\");\n/* harmony import */ var _ui__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ui */ \"./src/ui.js\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_style_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* eslint-env browser */\n\n\n\n\n\n\n\n\n\nconst Controller = (() => {\n  const update = (event) => {\n    const city = _ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"].getCity();\n    if (city) {\n      _data__WEBPACK_IMPORTED_MODULE_2__[\"default\"].getNow(city)\n        .then((now) => {\n          if (now.code === '200') {\n            _ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"].updateNow(now);\n            console.log(now);\n\n            _data__WEBPACK_IMPORTED_MODULE_2__[\"default\"].getFiveDays(city)\n              .then((forecast) => {\n                _ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"].updateForecast(forecast);\n              });\n          } else {\n            _ui__WEBPACK_IMPORTED_MODULE_3__[\"default\"].alert('danger', now.error_message);\n          }\n        });\n    }\n    event.preventDefault();\n  };\n\n  const init = () => {\n    const searchForm = document.forms.search;\n    searchForm.addEventListener('submit', update);\n  };\n\n  return {\n    init,\n  };\n})();\n\nController.init();\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -2883,19 +3039,31 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_validate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/validate */ \"./src/util/validate.js\");\n/* eslint-env browser */\n\n\n\nconst UI = (() => {\n  const alert = (type, msg) => {\n    const alertBar = document.getElementById('alert-bar');\n\n    const alertClass = `alert-${type}`;\n    alertBar.innerHTML = `\n      <div id=${alertClass} class=\"alert ${alertClass} alert-dismissible fade show text-capitalize\" role=\"alert\">\n        ${msg}\n        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>`;\n\n    window.setTimeout(() => {\n      document.getElementById(alertClass).remove();\n    }, 2500);\n  };\n\n  const getCity = () => {\n    let city = '';\n    const searchInput = document.getElementById('search-input');\n    const searchForm = document.forms.search;\n\n    if (_util_validate__WEBPACK_IMPORTED_MODULE_0__[\"default\"].check(searchInput.value, 'city')) {\n      city = searchInput.value;\n    } else {\n      alert('warning', 'Please input a valid City Name!');\n      city = null;\n    }\n\n    searchForm.reset();\n    return city;\n  };\n\n  const updateNow = (data) => {\n    const weekday = document.getElementsByName('weather-current-weekday')[0];\n    const date = document.getElementsByName('weather-date')[0];\n    const location = document.getElementsByName('weather-location')[0];\n    const temperature = document.getElementsByName('weather-temperature')[0];\n    const temperatureFeel = document.getElementsByName('weather-temperature-feel')[0];\n    const weatherDescription = document.getElementsByName('weather-description')[0];\n    const weatherIconNow = document.getElementsByName('weather-icon-now')[0];\n\n    document.getElementsByName('weather-wind')[0].innerText = data.wind_speed;\n    document.getElementsByName('weather-clouds')[0].innerText = data.clouds;\n    document.getElementsByName('weather-humidity')[0].innerText = data.humidity;\n    document.getElementsByName('weather-pressure')[0].innerText = data.pressure;\n\n\n    weekday.innerText = data.des_weekday;\n    date.innerText = data.des_date;\n    location.innerText = `${data.city}, ${data.country}`;\n    temperature.innerHTML = `${data.temperature} <span class=\"symbol\">°</span>C`;\n    temperatureFeel.innerHTML = `<span class=\"mr-1\"> Feel Like </span> ${data.temperature_feel} <span class=\"symbol\">°</span>C`;\n    weatherDescription.innerText = data.description;\n    weatherIconNow.src = `http://openweathermap.org/img/wn/${data.weather_icon}@2x.png`;\n  };\n\n  const updateForecast = (forecast) => {\n    const weeklyNode = document.getElementsByName('weekly-weather')[0];\n    weeklyNode.innerHTML = '';\n\n    for (let i = 0; i < forecast.length; i += 1) {\n      const oneDay = document.createElement('div');\n      let weekday = forecast[i].des_weekday;\n      if (i === 0) weekday = 'Today';\n      if (i === 1) weekday = 'Tomorrow';\n      oneDay.setAttribute('class', 'weekly-weather-item');\n\n      oneDay.innerHTML = `\n      <p class=\"mb-0\"> ${weekday} </p> \n        <img src=\"http://openweathermap.org/img/wn/${forecast[i].weather_icon}.png\" alt=\"weather-icon\">\n      <p class=\"mb-0\"> ${forecast[i].temperature}° </p>`;\n\n      weeklyNode.appendChild(oneDay);\n    }\n  };\n\n  return {\n    alert,\n    getCity,\n    updateNow,\n    updateForecast,\n  };\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (UI);\n\n\n//# sourceURL=webpack:///./src/ui.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _util_validate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./util/validate */ \"./src/util/validate.js\");\n/* harmony import */ var _util_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util/image */ \"./src/util/image.js\");\n/* eslint-env browser */\n\n\n\n\nconst UI = (() => {\n  const alert = (type, msg) => {\n    const alertBar = document.getElementById('alert-bar');\n\n    const alertClass = `alert-${type}`;\n    alertBar.innerHTML = `\n      <div id=${alertClass} class=\"alert ${alertClass} alert-dismissible fade show text-capitalize\" role=\"alert\">\n        ${msg}\n        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>`;\n\n    window.setTimeout(() => {\n      document.getElementById(alertClass).remove();\n    }, 2500);\n  };\n\n  const getCity = () => {\n    let city = '';\n    const searchInput = document.getElementById('search-input');\n    const searchForm = document.forms.search;\n\n    if (_util_validate__WEBPACK_IMPORTED_MODULE_0__[\"default\"].check(searchInput.value, 'city')) {\n      city = searchInput.value;\n    } else {\n      alert('warning', 'Please input a valid City Name!');\n      city = null;\n    }\n\n    searchForm.reset();\n    return city;\n  };\n\n  const updateNow = (data) => {\n    const weekday = document.getElementsByName('weather-current-weekday')[0];\n    const date = document.getElementsByName('weather-date')[0];\n    const location = document.getElementsByName('weather-location')[0];\n    const temperature = document.getElementsByName('weather-temperature')[0];\n    const temperatureFeel = document.getElementsByName('weather-temperature-feel')[0];\n    const weatherDescription = document.getElementsByName('weather-description')[0];\n    const weatherIconNow = document.getElementsByName('weather-icon-now')[0];\n\n    document.getElementsByName('weather-wind')[0].innerText = data.wind_speed;\n    document.getElementsByName('weather-clouds')[0].innerText = data.clouds;\n    document.getElementsByName('weather-humidity')[0].innerText = data.humidity;\n    document.getElementsByName('weather-pressure')[0].innerText = data.pressure;\n\n\n    weekday.innerText = data.des_weekday;\n    date.innerText = data.des_date;\n    location.innerText = `${data.city}, ${data.country}`;\n    temperature.innerHTML = `${data.temperature} <span class=\"symbol\">°</span>C`;\n    temperatureFeel.innerHTML = `<span class=\"mr-1\"> Feel Like </span> ${data.temperature_feel} <span class=\"symbol\">°</span>C`;\n    weatherDescription.innerText = data.description;\n    weatherIconNow.src = `http://openweathermap.org/img/wn/${data.weather_icon}@2x.png`;\n\n    const weatherNowCard = document.getElementsByName('weather-now-card')[0];\n    const weatherImg = _util_image__WEBPACK_IMPORTED_MODULE_1__[\"default\"].getWeatherImg(data.weather_id, data.night);\n    weatherNowCard.style.backgroundImage = `url(${weatherImg})`;\n  };\n\n  const updateForecast = (forecast) => {\n    const weeklyNode = document.getElementsByName('weekly-weather')[0];\n    weeklyNode.innerHTML = '';\n\n    for (let i = 0; i < forecast.length; i += 1) {\n      const oneDay = document.createElement('div');\n      let weekday = forecast[i].des_weekday;\n      if (i === 0) weekday = 'Today';\n      if (i === 1) weekday = 'Tomorrow';\n      oneDay.setAttribute('class', 'weekly-weather-item');\n\n      oneDay.innerHTML = `\n      <p class=\"mb-0\"> ${weekday} </p> \n        <img src=\"http://openweathermap.org/img/wn/${forecast[i].weather_icon}.png\" alt=\"weather-icon\">\n      <p class=\"mb-0\"> ${forecast[i].temperature}° </p>`;\n\n      weeklyNode.appendChild(oneDay);\n    }\n  };\n\n  return {\n    alert,\n    getCity,\n    updateNow,\n    updateForecast,\n  };\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (UI);\n\n\n//# sourceURL=webpack:///./src/ui.js?");
 
 /***/ }),
 
-/***/ "./src/util/date_convert.js":
-/*!**********************************!*\
-  !*** ./src/util/date_convert.js ***!
-  \**********************************/
+/***/ "./src/util/date_fns.js":
+/*!******************************!*\
+  !*** ./src/util/date_fns.js ***!
+  \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! date-fns */ \"./node_modules/date-fns/esm/index.js\");\n\n\nconst DateConvert = (() => {\n  const getDate = date => Object(date_fns__WEBPACK_IMPORTED_MODULE_0__[\"format\"])(date, 'PPpp');\n\n  const getWeekday = date => Object(date_fns__WEBPACK_IMPORTED_MODULE_0__[\"format\"])(date, 'cccc');\n\n  const getShortWeekday = date => Object(date_fns__WEBPACK_IMPORTED_MODULE_0__[\"format\"])(date, 'ccc');\n\n  const getDesLocalTime = (desOffsetUTC) => {\n    const localNow = new Date();\n    const localOffsetUTC = localNow.getTimezoneOffset() / 60;\n\n    return Object(date_fns__WEBPACK_IMPORTED_MODULE_0__[\"addHours\"])(localNow, localOffsetUTC + desOffsetUTC);\n  };\n\n  return {\n    getDate,\n    getWeekday,\n    getShortWeekday,\n    getDesLocalTime,\n  };\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (DateConvert);\n\n\n//# sourceURL=webpack:///./src/util/date_convert.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! date-fns */ \"./node_modules/date-fns/esm/index.js\");\n\n\nconst DateFns = (() => {\n  const getDate = date => Object(date_fns__WEBPACK_IMPORTED_MODULE_0__[\"format\"])(date, 'PPpp');\n\n  const getWeekday = date => Object(date_fns__WEBPACK_IMPORTED_MODULE_0__[\"format\"])(date, 'cccc');\n\n  const getShortWeekday = date => Object(date_fns__WEBPACK_IMPORTED_MODULE_0__[\"format\"])(date, 'ccc');\n\n  const getDesLocalTime = (desOffsetUTC) => {\n    const localNow = new Date();\n    const localOffsetUTC = localNow.getTimezoneOffset() / 60;\n\n    return Object(date_fns__WEBPACK_IMPORTED_MODULE_0__[\"addHours\"])(localNow, localOffsetUTC + desOffsetUTC);\n  };\n\n  const checkNight = date => {\n    const hour = date.getHours();\n    if (hour >= 6 && hour <= 18) return false;\n    return true;\n  }\n\n  return {\n    getDate,\n    getWeekday,\n    getShortWeekday,\n    getDesLocalTime,\n    checkNight,\n  };\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (DateFns);\n\n\n//# sourceURL=webpack:///./src/util/date_fns.js?");
+
+/***/ }),
+
+/***/ "./src/util/image.js":
+/*!***************************!*\
+  !*** ./src/util/image.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_image_clear_day_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/image/clear_day.png */ \"./src/assets/image/clear_day.png\");\n/* harmony import */ var _assets_image_clear_night_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/image/clear_night.png */ \"./src/assets/image/clear_night.png\");\n/* harmony import */ var _assets_image_clouds_day_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/image/clouds_day.png */ \"./src/assets/image/clouds_day.png\");\n/* harmony import */ var _assets_image_clouds_night_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/image/clouds_night.png */ \"./src/assets/image/clouds_night.png\");\n/* harmony import */ var _assets_image_drizzle_day_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/image/drizzle_day.png */ \"./src/assets/image/drizzle_day.png\");\n/* harmony import */ var _assets_image_drizzle_night_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/image/drizzle_night.png */ \"./src/assets/image/drizzle_night.png\");\n/* harmony import */ var _assets_image_fog_day_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/image/fog_day.png */ \"./src/assets/image/fog_day.png\");\n/* harmony import */ var _assets_image_fog_night1_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/image/fog_night1.png */ \"./src/assets/image/fog_night1.png\");\n/* harmony import */ var _assets_image_rain_day_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/image/rain_day.png */ \"./src/assets/image/rain_day.png\");\n/* harmony import */ var _assets_image_rain_night_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/image/rain_night.png */ \"./src/assets/image/rain_night.png\");\n/* harmony import */ var _assets_image_snow_day_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/image/snow_day.png */ \"./src/assets/image/snow_day.png\");\n/* harmony import */ var _assets_image_snow_night_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/image/snow_night.png */ \"./src/assets/image/snow_night.png\");\n/* harmony import */ var _assets_image_thunderstorm_day_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/image/thunderstorm_day.png */ \"./src/assets/image/thunderstorm_day.png\");\n/* harmony import */ var _assets_image_thunderstorm_night_1_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../assets/image/thunderstorm_night-1.png */ \"./src/assets/image/thunderstorm_night-1.png\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nconst Image = (() => {\n  const weatherImgs = {\n    '200D': _assets_image_thunderstorm_day_png__WEBPACK_IMPORTED_MODULE_12__[\"default\"],\n    '200N': _assets_image_thunderstorm_night_1_png__WEBPACK_IMPORTED_MODULE_13__[\"default\"],\n    '300D': _assets_image_drizzle_day_png__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n    '300N': _assets_image_drizzle_night_png__WEBPACK_IMPORTED_MODULE_5__[\"default\"],\n    '500D': _assets_image_rain_day_png__WEBPACK_IMPORTED_MODULE_8__[\"default\"],\n    '500N': _assets_image_rain_night_png__WEBPACK_IMPORTED_MODULE_9__[\"default\"],\n    '600D': _assets_image_snow_day_png__WEBPACK_IMPORTED_MODULE_10__[\"default\"],\n    '600N': _assets_image_snow_night_png__WEBPACK_IMPORTED_MODULE_11__[\"default\"],\n    '700D': _assets_image_fog_day_png__WEBPACK_IMPORTED_MODULE_6__[\"default\"],\n    '700N': _assets_image_fog_night1_png__WEBPACK_IMPORTED_MODULE_7__[\"default\"],\n    '800D': _assets_image_clear_day_png__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    '800N': _assets_image_clear_night_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    '801D': _assets_image_clouds_day_png__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n    '801N': _assets_image_clouds_night_png__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n  }\n\n  const getWeatherImg = (weatherId, night) => {\n    let imgCode = '';\n    let dayNightCode = night ? 'N' : 'D';\n\n    if (weatherId > 800) {\n      imgCode = 801 + dayNightCode;\n    } else {\n      imgCode = Math.round(weatherId / 100) * 100 + dayNightCode;\n    };\n\n    return weatherImgs[imgCode];\n  }\n\n  return {\n    getWeatherImg,\n  }\n\n\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Image);\n\n\n\n//# sourceURL=webpack:///./src/util/image.js?");
 
 /***/ }),
 

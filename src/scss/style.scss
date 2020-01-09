@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
 
-// @import '@mdi/font/scss/materialdesignicons';
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
@@ -37,14 +36,14 @@ p {
 }
 
 .card-weather .card-body:first-child {
-  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1557323760/weather.svg) no-repeat center;
-  background-size: cover
+  background: url("../assets/image/rain_night.png") no-repeat center;
+  background-size: cover;
 }
 
 .text-gray,
 .card-subtitle,
 .new-accounts ul.chats li.chat-persons a p.joined-date {
-  color: #969696
+  color: #cbcaca
 }
 
 .card-weather .card-body {
@@ -71,9 +70,13 @@ p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 56px;
   font-weight: 900;
-  color: gray;
+  color: rgb(211, 212, 211);
 }
 
 .weather-icon-now {
   width: 140px;
+}
+
+.text-lightgrey {
+  color: lightgray;
 }

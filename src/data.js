@@ -7,6 +7,7 @@ const Data = (() => {
   const getNow = async (input) => {
     const response = await Weather.fetchData(input, 'C', 1);
     if (response.cod === 200) {
+      console.log(response);
       const desOffsetHours = response.timezone / (60 * 60);
       const desLocalTime = DateConvert.getDesLocalTime(desOffsetHours);
 

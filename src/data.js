@@ -4,8 +4,8 @@ import Weather from './util/weather_api';
 import DateFns from './util/date_fns';
 
 const Data = (() => {
-  const getNow = async (input) => {
-    const response = await Weather.fetchData(input, 'C', 1);
+  const getNow = async (input, unit) => {
+    const response = await Weather.fetchData(input, unit, 1);
     if (response.cod === 200) {
       console.log(response);
       const desOffsetHours = response.timezone / (60 * 60);
@@ -31,6 +31,7 @@ const Data = (() => {
         des_date: DateFns.getDate(desLocalTime),
         des_weekday: DateFns.getWeekday(desLocalTime),
         night: DateFns.checkNight(desLocalTime),
+        unit: unit,
       };
     }
 
@@ -40,8 +41,8 @@ const Data = (() => {
     };
   };
 
-  const getFiveDays = async (input) => {
-    const response = await await Weather.fetchData(input, 'C', 5);
+  const getFiveDays = async (input, unit) => {
+    const response = await await Weather.fetchData(input, unit, 5);
     if (response.cod === '200') {
       const forecast = [];
       const dataArray = response.list;

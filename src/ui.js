@@ -16,9 +16,6 @@ const UI = (() => {
         </button>
       </div>`;
 
-    window.setTimeout(() => {
-      document.getElementById(alertClass).remove();
-    }, 2500);
   };
 
   const getCity = () => {
@@ -32,7 +29,6 @@ const UI = (() => {
       alert('warning', 'Please input a valid City Name!');
       city = null;
     }
-
     searchForm.reset();
     return city;
   };
@@ -58,8 +54,8 @@ const UI = (() => {
     city.innerText = data.city;
     country.innerText = data.country;
 
-    temperature.innerHTML = `${data.temperature} <span class="symbol">°</span>C`;
-    temperatureFeel.innerHTML = `<span class="mr-1"> Feel Like </span> ${data.temperature_feel} <span class="symbol">°</span>C`;
+    temperature.innerHTML = `${data.temperature} <span class="symbol">°</span>${data.unit}`;
+    temperatureFeel.innerHTML = `<span class="mr-1"> Feel Like </span> ${data.temperature_feel} <span class="symbol">°</span>${data.unit}`;
     weatherDescription.innerText = data.description;
 
 

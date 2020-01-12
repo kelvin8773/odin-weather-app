@@ -4,74 +4,74 @@ import Weather from './util/weather_api';
 import DateFns from './util/date_fns';
 
 const Data = (() => {
-  const getNow = async (input, unit) => {
-    const response = await Weather.fetchData(input, unit, 1);
-    if (response.cod === 200) {
-      console.log(response);
-      const desOffsetHours = response.timezone / (60 * 60);
-      const desLocalTime = DateFns.getDesLocalTime(desOffsetHours);
 
-      return {
-        code: response.cod.toString(),
-        weather_id: response.weather[0].id,
-        weather: response.weather[0].main,
-        description: response.weather[0].description,
-        weather_icon: response.weather[0].icon,
-        temperature: Math.round(response.main.temp),
-        temperature_feel: Math.round(response.main.feels_like),
-        temperature_min: response.main.temp_min,
-        temperature_max: response.main.temp_max,
-        pressure: response.main.pressure,
-        humidity: response.main.humidity,
-        wind_speed: response.wind.speed,
-        wind_degree: response.wind.deg,
-        clouds: response.clouds.all,
-        city: response.name,
-        country: response.sys.country,
-        des_date: DateFns.getDate(desLocalTime),
-        des_weekday: DateFns.getWeekday(desLocalTime),
-        night: DateFns.checkNight(desLocalTime),
-        unit: unit,
-      };
-    }
-
-    return {
-      code: response.cod,
-      error_message: response.message,
+  const processToday = data => {
+    const desOffsetHours = data.timezone / (60 * 60);
+    const desLocalTime = DateFns.getDesLocalTime(desOffsetHours);
+    const weather = {
+      cod: data.cod.toString(),
+      weather_id: data.weather[0].id,
+      weather: data.weather[0].main,
+      description: data.weather[0].description,
+      weather_icon: data.weather[0].icon,
+      temperature: Math.round(data.main.temp),
+      temperature_feel: Math.round(data.main.feels_like),
+      temperature_min: data.main.temp_min,
+      temperature_max: data.main.temp_max,
+      pressure: data.main.pressure,
+      humidity: data.main.humidity,
+      wind_speed: data.wind.speed,
+      wind_degree: data.wind.deg,
+      clouds: data.clouds.all,
+      city_id: data.id,
+      city: data.name,
+      country: data.sys.country,
+      des_date: DateFns.getDate(desLocalTime),
+      des_weekday: DateFns.getWeekday(desLocalTime),
+      night: DateFns.checkNight(desLocalTime),
     };
+    return weather;
   };
 
-  const getFiveDays = async (input, unit) => {
-    const response = await await Weather.fetchData(input, unit, 5);
-    if (response.cod === '200') {
-      const forecast = [];
-      const dataArray = response.list;
-
-      for (let i = 0; i < dataArray.length; i += 8) {
-        const oneDay = {
-          weather: dataArray[i].weather[0].main,
-          description: dataArray[i].weather[0].description,
-          weather_icon: dataArray[i].weather[0].icon,
-          temperature: Math.round(dataArray[i].main.temp),
-          temperature_feel: Math.round(dataArray[i].main.feels_like),
-          temperature_min: Math.round(dataArray[i].main.temp_min),
-          temperature_max: Math.round(dataArray[i].main.temp_max),
-          des_date: DateFns.getDate(new Date(dataArray[i].dt_txt)),
-          des_weekday: DateFns.getShortWeekday(new Date(dataArray[i].dt_txt)),
-          city_id: response.city.id,
-          city: response.city.name,
-          country: response.city.country,
-        };
-        forecast.push(oneDay);
-      }
-      return forecast;
+  const processForecast = data => {
+    const forecast = [];
+    const dataArray = data.list;
+    for (let i = 0; i < dataArray.length; i += 8) {
+      const oneDay = {
+        weather: dataArray[i].weather[0].main,
+        description: dataArray[i].weather[0].description,
+        weather_icon: dataArray[i].weather[0].icon,
+        temperature: Math.round(dataArray[i].main.temp),
+        temperature_feel: Math.round(dataArray[i].main.feels_like),
+        temperature_min: Math.round(dataArray[i].main.temp_min),
+        temperature_max: Math.round(dataArray[i].main.temp_max),
+        des_date: DateFns.getDate(new Date(dataArray[i].dt_txt)),
+        des_weekday: DateFns.getShortWeekday(new Date(dataArray[i].dt_txt)),
+      };
+      forecast.push(oneDay);
     }
-    return response;
+    return forecast;
   };
+
+  const getWeather = async (params) => {
+    const data = await Weather.getWeatherData(params);
+
+    if (data[0].cod === 200) {
+      const weather = processToday(data[0]);
+      weather.unit = params.unit;
+      weather.forecast = processForecast(data[1]);
+      return weather;
+    }
+    else {
+      return {
+        cod: data[0].cod,
+        message: "Something Wrong, Please Try Again!"
+      }
+    }
+  }
 
   return {
-    getNow,
-    getFiveDays,
+    getWeather,
   };
 })();
 

@@ -27,7 +27,7 @@ const UI = (() => {
       city = searchInput.value;
     } else {
       alert('warning', 'Please input a valid City Name!');
-      city = null;
+      city = '';
     }
     searchForm.reset();
     return city;
@@ -41,7 +41,9 @@ const UI = (() => {
     const temperature = document.getElementsByName('weather-temperature')[0];
     const temperatureFeel = document.getElementsByName('weather-temperature-feel')[0];
     const weatherDescription = document.getElementsByName('weather-description')[0];
+    const windUnit = document.getElementsByName('wind-unit')[0];
 
+    windUnit.innerText = data.unit === 'C' ? 'M/S' : 'M/H';
 
     document.getElementsByName('weather-wind')[0].innerText = data.wind_speed;
     document.getElementsByName('weather-clouds')[0].innerText = data.clouds;

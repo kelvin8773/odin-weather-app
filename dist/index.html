@@ -22,15 +22,19 @@
       </div>
 
       <div class="form-check form-check-inline ml-3">
-        <input class="form-check-input" type="radio" name="temperatureUnit" id="temp-unit-c" value="C">
+        <input class="form-check-input" type="radio" name="temperatureUnit" id="temp-unit-c" value="C" checked>
         <label class="form-check-label" for="temp-unit-c">C</label>
       </div>
       <div class="form-check form-check-inline ml-1">
-        <input class="form-check-input" type="radio" name="temperatureUnit" id="temp-unit-f" value="F" checked>
+        <input class="form-check-input" type="radio" name="temperatureUnit" id="temp-unit-f" value="F">
         <label class="form-check-label" for="temp-unit-f">F</label>
       </div>
 
     </form>
+
+    <div id="info-spinner">
+
+    </div>
 
     <div class="shadow mb-5" id="page-content">
       <!--weather card-->
@@ -60,7 +64,7 @@
               <div>
                 <h6 class="font-weight-bolder">Wind</h6>
                 <h2 name="weather-wind">18</h2>
-                <p>M/S</p>
+                <p name="wind-unit">M/S</p>
               </div>
 
               <div>

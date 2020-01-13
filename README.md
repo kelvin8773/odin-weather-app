@@ -70,7 +70,7 @@ npm start
 ```
 > Open http://127.0.0.1:8080 using your favorite browser, if it doesn't open automatically.
 
-## Development Mode
+## ☕️ Development Mode 
 
 After run the project locally, you can choose either **build once** or **continue build** to reflect changes from development.
 

@@ -62,6 +62,8 @@ const Controller = (() => {
         .catch(() => {
           UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^');
         });
+
+      UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^');
     }
   };
 

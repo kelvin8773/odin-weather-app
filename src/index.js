@@ -52,6 +52,7 @@ const Controller = (() => {
     } else {
       IpLocation.query()
         .then((result) => {
+          console.log(result);
           params.city = result.city;
           params.currentLocation = true;
           params.latitude = Number(result.lat).toFixed(2);

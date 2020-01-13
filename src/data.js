@@ -10,6 +10,8 @@ const Data = (() => {
     const desLocalTime = DateFns.getDesLocalTime(desOffsetHours);
     const weather = {
       cod: data.cod.toString(),
+      latitude: data.coord.lat,
+      longitude: data.coord.lon,
       weather_id: data.weather[0].id,
       weather: data.weather[0].main,
       description: data.weather[0].description,
@@ -36,7 +38,7 @@ const Data = (() => {
   const processForecast = data => {
     const forecast = [];
     const dataArray = data.list;
-    for (let i = 0; i < dataArray.length; i += 8) {
+    for (let i = 3; i < dataArray.length; i += 8) {
       const oneDay = {
         weather: dataArray[i].weather[0].main,
         description: dataArray[i].weather[0].description,

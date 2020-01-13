@@ -4,9 +4,10 @@ import Validate from './util/validate';
 import Image from './util/image';
 
 const UI = (() => {
-  const alert = (type, msg) => {
-    const alertBar = document.getElementById('alert-bar');
+  const infoBar = document.getElementById('info-bar');
+  const alertBar = document.getElementById('alert-bar');
 
+  const alert = (type, msg) => {
     const alertClass = `alert-${type}`;
     alertBar.innerHTML = `
       <div id=${alertClass} class="alert ${alertClass} alert-dismissible fade show text-capitalize" role="alert">
@@ -95,11 +96,33 @@ const UI = (() => {
     }
   };
 
+  const showInfo = msg => {
+    const infoContent = document.createElement('span');
+    const infoSpinner = document.createElement('span');
+
+    infoContent.innerText = msg;
+    infoSpinner.innerHTML = `<div class="spinner-border text-warning" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>`;
+    infoSpinner.setAttribute('Class', 'ml-5');
+
+    infoBar.append(infoContent);
+    infoBar.append(infoSpinner);
+  }
+
+  const clearInfo = (time) => {
+    setTimeout(() => {
+      infoBar.innerHTML = '';
+    }, time * 1000);
+  }
+
   return {
     alert,
     getCity,
     updateNow,
     updateForecast,
+    showInfo,
+    clearInfo,
   };
 })();
 

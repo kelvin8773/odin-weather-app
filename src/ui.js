@@ -87,7 +87,7 @@ const UI = (() => {
 
       oneDay.innerHTML = `
       <p class="mb-0"> ${weekday} </p> 
-        <img src="http://openweathermap.org/img/wn/${forecast[i].weather_icon}.png" alt="weather-icon">
+        <img src="https://openweathermap.org/img/wn/${forecast[i].weather_icon}.png" alt="weather-icon">
       <p class="mb-0"> ${forecast[i].temperature}° </p>`;
 
       weeklyNode.appendChild(oneDay);

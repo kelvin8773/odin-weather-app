@@ -49,6 +49,7 @@ const Controller = (() => {
         params.longitude = pos.coords.longitude.toFixed(2);
         updateUI();
       });
+      UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^');
     } else {
       IpLocation.query()
         .then((result) => {

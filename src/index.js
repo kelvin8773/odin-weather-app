@@ -31,7 +31,7 @@ const Controller = (() => {
             params.longitude = weather.longitude;
             UI.updateNow(weather);
             UI.updateForecast(weather.forecast);
-            UI.clearInfo(1);
+            UI.clearInfo(2);
           } else {
             throw new Error(`${weather.cod} - ${weather.message}`);
           }
@@ -67,31 +67,31 @@ const Controller = (() => {
 
   const init = () => {
     UI.showInfo('Loading your city ...');
-    // UI.clearInfo(3);
     updateLocation();
 
     tempUnitC.addEventListener('click', () => {
-      UI.showInfo('Updating ...');
-      UI.clearInfo(1);
+      UI.showInfo(`Updating ${params.city} ...`);
       params.currentLocation = false;
       params.unit = 'C';
       updateUI();
     });
     tempUnitF.addEventListener('click', () => {
-      UI.showInfo('Updating ...');
-      UI.clearInfo(1);
+      UI.showInfo(`Updating ${params.city} ...`);
       params.currentLocation = false;
       params.unit = 'F';
       updateUI();
     });
 
     searchForm.addEventListener('submit', (event) => {
-      UI.showInfo('Loading weather ...');
-      UI.clearInfo(1.5);
       params.currentLocation = false;
       params.city = UI.getCity();
-      params.unit = tempUnitC.checked ? 'C' : 'F';
-      updateUI();
+      if (params.city.length === 0) {
+        UI.alert('warning', 'Please input a valid City Name!');
+      } else {
+        UI.showInfo(`Loading ${params.city}'s weather ...`);
+        params.unit = tempUnitC.checked ? 'C' : 'F';
+        updateUI();
+      }
       event.preventDefault();
     });
   };

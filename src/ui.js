@@ -25,10 +25,8 @@ const UI = (() => {
 
     if (Validate.check(searchInput.value, 'city')) {
       city = searchInput.value;
-    } else {
-      alert('warning', 'Please input a valid City Name!');
-      city = '';
     }
+
     searchForm.reset();
     return city;
   };

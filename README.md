@@ -44,7 +44,7 @@ Finally, following resources have been utilized to help build this app:
 
 ## ✨ Live Demo ✨
 
-[Githack Host](https://raw.githack.com/kelvin8773/odin-weather-app/advance-functions/dist/index.html)
+[Githack Host](https://rawcdn.githack.com/kelvin8773/odin-weather-app/f01125b4da94e0d701838a40e6ccbdd131ab9fdd/dist/index.html)
 
 [Github host](https://#)
 

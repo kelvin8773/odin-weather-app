@@ -31,6 +31,7 @@ const Controller = (() => {
             params.longitude = weather.longitude;
             UI.updateNow(weather);
             UI.updateForecast(weather.forecast);
+            UI.clearInfo(1);
           } else {
             throw new Error(`${weather.cod} - ${weather.message}`);
           }
@@ -66,7 +67,7 @@ const Controller = (() => {
 
   const init = () => {
     UI.showInfo('Loading your city ...');
-    UI.clearInfo(3);
+    // UI.clearInfo(3);
     updateLocation();
 
     tempUnitC.addEventListener('click', () => {

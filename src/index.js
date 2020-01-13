@@ -49,11 +49,9 @@ const Controller = (() => {
         params.longitude = pos.coords.longitude.toFixed(2);
         updateUI();
       });
-      UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^');
     } else {
       IpLocation.query()
         .then((result) => {
-          console.log(result);
           params.city = result.city;
           params.currentLocation = true;
           params.latitude = Number(result.lat).toFixed(2);
@@ -63,8 +61,6 @@ const Controller = (() => {
         .catch(() => {
           UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^');
         });
-
-      UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^');
     }
   };
 

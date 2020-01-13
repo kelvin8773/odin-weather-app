@@ -1,13 +1,10 @@
+import fetchData from './fetch_api';
+
 const Weather = (() => {
   const BASE_URL = 'https://api.openweathermap.org/data/2.5/';
   const UNIT_METRIC = '&units=metric';
   const UNIT_IMPERIAL = '&units=imperial';
   const API = `&appid=${process.env.OPEN_WEATHER_API_KEY}`;
-
-  const fetchData = async (url) => {
-    const response = await fetch(url, { mode: 'cors' });
-    return response.json();
-  }
 
   const getWeatherData = async (params) => {
     const TODAY_QUERY = 'weather?';
@@ -20,15 +17,12 @@ const Weather = (() => {
     const unitString = (params.unit === 'C') ? UNIT_METRIC : UNIT_IMPERIAL;
     const lanString = '&lang=' + params.language;
 
-
     const todayURL = BASE_URL + TODAY_QUERY + queryString + unitString + lanString + API;
     const forecastURL = BASE_URL + FORECAST_QUERY + queryString + unitString + lanString + API;
 
     const today = await fetchData(todayURL);
     const forecast = await fetchData(forecastURL);
-
-    return [today, forecast]
-
+    return [today, forecast];
   };
 
 

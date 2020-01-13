@@ -56,19 +56,20 @@ const Data = (() => {
   };
 
   const getWeather = async (params) => {
-    const data = await Weather.getWeatherData(params);
-
-    if (data[0].cod === 200) {
-      const weather = processToday(data[0]);
-      weather.unit = params.unit;
-      weather.forecast = processForecast(data[1]);
-      return weather;
-    }
-    else {
-      return {
-        cod: data[0].cod,
-        message: "Something Wrong, Please Try Again!"
+    try {
+      const data = await Weather.getWeatherData(params);
+      if (data[0].cod === 200) {
+        const weather = processToday(data[0]);
+        weather.unit = params.unit;
+        weather.forecast = processForecast(data[1]);
+        return weather;
       }
+      else {
+        return data[0];
+      }
+    }
+    catch (error) {
+      return error;
     }
   }
 

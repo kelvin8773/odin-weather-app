@@ -4,12 +4,13 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Data from './data';
 import UI from './ui';
+import IpLocation from './util/ip_location';
 
 import './scss/style.scss';
 
 const Controller = (() => {
   const params = {
-    city: 'sydney',
+    city: '',
     unit: 'C',
     currentLocation: false,
     latitude: '',
@@ -32,29 +33,43 @@ const Controller = (() => {
             UI.updateForecast(weather.forecast);
           }
           else {
-            UI.alert('danger', `Error ${weather.cod} - ${weather.message}`);
+            throw new Error(`${weather.cod} - ${weather.message}`);
           }
-        });
+        })
+        .catch(error => {
+          UI.alert('danger', error);
+        })
     }
   };
 
   const updateLocation = () => {
-    if (navigator.geolocation) {
+    if (!navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((pos) => {
         params.currentLocation = true;
         params.latitude = pos.coords.latitude.toFixed(2);
         params.longitude = pos.coords.longitude.toFixed(2);
         updateUI();
       });
-    } else {
-      UI.alert("warning", "Can't Load your City ..., Try to type your city below instead! ^_^")
     }
-
+    else {
+      IpLocation.query()
+        .then(result => {
+          params.city = result.city;
+          params.currentLocation = true;
+          params.latitude = Number(result.lat).toFixed(2);
+          params.longitude = Number(result.lon).toFixed(2);
+          updateUI();
+        })
+        .catch(error => {
+          console.log(error);
+          UI.alert("warning", `Can't Load your City, Search Below Instead ... ^_^`);
+        });
+    }
   }
 
   const init = () => {
     UI.showInfo("Loading your city ...");
-    UI.clearInfo(2);
+    UI.clearInfo(3);
     updateLocation();
 
     tempUnitC.addEventListener('click', () => {

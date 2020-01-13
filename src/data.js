@@ -4,8 +4,7 @@ import Weather from './util/weather_api';
 import DateFns from './util/date_fns';
 
 const Data = (() => {
-
-  const processToday = data => {
+  const processToday = (data) => {
     const desOffsetHours = data.timezone / (60 * 60);
     const desLocalTime = DateFns.getDesLocalTime(desOffsetHours);
     const weather = {
@@ -35,7 +34,7 @@ const Data = (() => {
     return weather;
   };
 
-  const processForecast = data => {
+  const processForecast = (data) => {
     const forecast = [];
     const dataArray = data.list;
     for (let i = 3; i < dataArray.length; i += 8) {
@@ -64,14 +63,12 @@ const Data = (() => {
         weather.forecast = processForecast(data[1]);
         return weather;
       }
-      else {
-        return data[0];
-      }
-    }
-    catch (error) {
+
+      return data[0];
+    } catch (error) {
       return error;
     }
-  }
+  };
 
   return {
     getWeather,

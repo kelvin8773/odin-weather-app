@@ -16,7 +16,6 @@ const UI = (() => {
           <span aria-hidden="true">&times;</span>
         </button>
       </div>`;
-
   };
 
   const getCity = () => {
@@ -52,7 +51,7 @@ const UI = (() => {
     document.getElementsByName('weather-pressure')[0].innerText = data.pressure;
 
 
-    weekday.innerText = data.des_weekday + ", ";
+    weekday.innerText = `${data.des_weekday}, `;
     date.innerText = data.des_date;
     city.innerText = data.city;
     country.innerText = data.country;
@@ -73,7 +72,6 @@ const UI = (() => {
       weatherNowCard.classList.remove('text-night-color');
       weatherNowCard.classList.add('text-day-color');
     }
-
   };
 
   const updateForecast = (forecast) => {
@@ -96,7 +94,7 @@ const UI = (() => {
     }
   };
 
-  const showInfo = msg => {
+  const showInfo = (msg) => {
     const infoContent = document.createElement('span');
     const infoSpinner = document.createElement('span');
 
@@ -108,13 +106,13 @@ const UI = (() => {
 
     infoBar.append(infoContent);
     infoBar.append(infoSpinner);
-  }
+  };
 
   const clearInfo = (time) => {
     setTimeout(() => {
       infoBar.innerHTML = '';
     }, time * 1000);
-  }
+  };
 
   return {
     alert,

@@ -11,11 +11,11 @@ const Weather = (() => {
     const FORECAST_QUERY = 'forecast?';
 
     const GET_BY_CITY = `q=${params.city}`;
-    const GET_BY_COORDS = `lat=${params.latitude}&lon=${params.longitude}`
+    const GET_BY_COORDS = `lat=${params.latitude}&lon=${params.longitude}`;
 
     const queryString = params.currentLocation ? GET_BY_COORDS : GET_BY_CITY;
     const unitString = (params.unit === 'C') ? UNIT_METRIC : UNIT_IMPERIAL;
-    const lanString = '&lang=' + params.language;
+    const lanString = `&lang=${params.language}`;
 
     const todayURL = BASE_URL + TODAY_QUERY + queryString + unitString + lanString + API;
     const forecastURL = BASE_URL + FORECAST_QUERY + queryString + unitString + lanString + API;
@@ -25,9 +25,8 @@ const Weather = (() => {
     return [today, forecast];
   };
 
-
   return {
-    getWeatherData
+    getWeatherData,
   };
 })();
 

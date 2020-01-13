@@ -37,6 +37,7 @@ const Controller = (() => {
           }
         })
         .catch((error) => {
+          UI.clearInfo(1);
           UI.alert('danger', error);
         });
     }

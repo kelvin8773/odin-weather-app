@@ -1,18 +1,18 @@
 
-import clearDay from '../assets/image/clear_day.png';
-import clearNight from '../assets/image/clear_night.png';
-import cloudsDay from '../assets/image/clouds_day.png';
-import cloudsNight from '../assets/image/clouds_night.png';
-import drizzleDay from '../assets/image/drizzle_day.png';
-import drizzleNight from '../assets/image/drizzle_night.png';
-import fogDay from '../assets/image/fog_day.png';
-import fogNight from '../assets/image/fog_night1.png';
-import rainDay from '../assets/image/rain_day.png';
-import rainNight from '../assets/image/rain_night.png';
-import snowDay from '../assets/image/snow_day.png';
-import snowNight from '../assets/image/snow_night.png';
-import thunderstormDay from '../assets/image/thunderstorm_day.png';
-import thunderstormNight from '../assets/image/thunderstorm_night-1.png';
+import clearDay from '../assets/image/clear_day.jpg';
+import clearNight from '../assets/image/clear_night.jpg';
+import cloudsDay from '../assets/image/clouds_day.jpg';
+import cloudsNight from '../assets/image/clouds_night.jpg';
+import drizzleDay from '../assets/image/drizzle_day.jpg';
+import drizzleNight from '../assets/image/drizzle_night.jpg';
+import fogDay from '../assets/image/fog_day.jpg';
+import fogNight from '../assets/image/fog_night1.jpg';
+import rainDay from '../assets/image/rain_day.jpg';
+import rainNight from '../assets/image/rain_night.jpg';
+import snowDay from '../assets/image/snow_day.jpg';
+import snowNight from '../assets/image/snow_night.jpg';
+import thunderstormDay from '../assets/image/thunderstorm_day.jpg';
+import thunderstormNight from '../assets/image/thunderstorm_night.jpg';
 
 
 const Image = (() => {

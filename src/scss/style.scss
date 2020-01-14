@@ -68,6 +68,17 @@ p {
   width: 140px;
 }
 
+.input-group {
+  width: 480px;
+}
+
+.input-search {
+  width: 410px;
+}
+
+.input-group-append {
+  height: 38px;
+}
 
 .text-day-color {
   color: rgb(195, 195, 195);
@@ -75,4 +86,22 @@ p {
 
 .text-night-color {
   color: #f2f2f2;
+}
+
+#unit-group {
+  font-size: 1.3rem;
+}
+
+.unit-selected {
+  color: rgb(162, 170, 86);
+  font-weight: 600;
+}
+
+.unit-not-selected {
+  font-weight: 500;
+}
+
+.unit-not-selected:hover {
+  color: rgb(173, 32, 32);
+  cursor: pointer;
 }

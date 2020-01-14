@@ -17,9 +17,11 @@ const Controller = (() => {
     longitude: '',
     language: 'en',
   };
+
+  const searchInput = document.getElementById('search-input');
   const searchForm = document.forms.search;
-  const tempUnitC = document.getElementById('temp-unit-c');
-  const tempUnitF = document.getElementById('temp-unit-f');
+  const tempUnitC = document.getElementById('unit-c');
+  const tempUnitF = document.getElementById('unit-f');
 
   const updateUI = () => {
     if (params.city.length !== 0 || params.currentLocation) {
@@ -61,8 +63,8 @@ const Controller = (() => {
           updateUI();
         })
         .catch(() => {
-          UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^', 3);
           UI.clearInfo(2);
+          UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^', 3);
         });
     };
 
@@ -76,17 +78,26 @@ const Controller = (() => {
   };
 
   const init = () => {
+    Data.getCities()
+      .then(data => {
+        UI.citiesSuggestion(data);
+      });
+
     UI.showInfo('Loading your city ...');
     updateLocation();
 
     tempUnitC.addEventListener('click', () => {
       UI.showInfo(`Updating ${params.city} ...`);
+      tempUnitC.classList = 'unit-selected';
+      tempUnitF.classList = 'unit-not-selected';
       params.currentLocation = false;
       params.unit = 'C';
       updateUI();
     });
     tempUnitF.addEventListener('click', () => {
       UI.showInfo(`Updating ${params.city} ...`);
+      tempUnitF.classList = 'unit-selected';
+      tempUnitC.classList = 'unit-not-selected';
       params.currentLocation = false;
       params.unit = 'F';
       updateUI();
@@ -104,6 +115,7 @@ const Controller = (() => {
       }
       event.preventDefault();
     });
+
   };
 
   return {

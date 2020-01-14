@@ -2,6 +2,7 @@
 
 import Weather from './util/weather_api';
 import DateFns from './util/date_fns';
+import * as d3 from 'd3';
 
 const Data = (() => {
   const processToday = (data) => {
@@ -63,15 +64,20 @@ const Data = (() => {
         weather.forecast = processForecast(data[1]);
         return weather;
       }
-
       return data[0];
     } catch (error) {
       return error;
     }
   };
 
+  const getCities = async () => {
+    const data = await d3.csv("./assets/data/world-cities.csv");
+    return data;
+  }
+
   return {
     getWeather,
+    getCities,
   };
 })();
 

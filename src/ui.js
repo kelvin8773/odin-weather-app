@@ -2,10 +2,13 @@
 
 import Validate from './util/validate';
 import Image from './util/image';
+const Suggestions = require('suggestions');
 
 const UI = (() => {
   const infoBar = document.getElementById('info-bar');
   const alertBar = document.getElementById('alert-bar');
+  const searchInput = document.getElementById('search-input');
+  const searchForm = document.forms.search;
 
   const alert = (type, msg, time = 5) => {
     const alertClass = `alert-${type}`;
@@ -24,8 +27,6 @@ const UI = (() => {
 
   const getCity = () => {
     let city = '';
-    const searchInput = document.getElementById('search-input');
-    const searchForm = document.forms.search;
 
     if (Validate.check(searchInput.value, 'city')) {
       city = searchInput.value;
@@ -116,6 +117,18 @@ const UI = (() => {
     }, time * 1000);
   };
 
+  const citiesSuggestion = (data) => {
+    new Suggestions(searchInput, data, {
+      minLength: 2,
+      limit: 3,
+      render: (item) => {
+        return `${item.name}, ${item.country}`
+      },
+      getItemValue: (item) => item.name,
+    });
+
+  }
+
   return {
     alert,
     getCity,
@@ -123,6 +136,7 @@ const UI = (() => {
     updateForecast,
     showInfo,
     clearInfo,
+    citiesSuggestion,
   };
 })();
 

@@ -38,20 +38,20 @@ const Controller = (() => {
         })
         .catch((error) => {
           UI.clearInfo(1);
-          UI.alert('danger', error);
+          UI.alert('danger', error, 3);
         });
     }
   };
 
   const updateLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((pos) => {
-        params.currentLocation = true;
-        params.latitude = pos.coords.latitude.toFixed(2);
-        params.longitude = pos.coords.longitude.toFixed(2);
-        updateUI();
-      });
-    } else {
+    const geoSuccess = (pos) => {
+      params.currentLocation = true;
+      params.latitude = pos.coords.latitude.toFixed(2);
+      params.longitude = pos.coords.longitude.toFixed(2);
+      updateUI();
+    }
+
+    const geoFail = () => {
       IpLocation.query()
         .then((result) => {
           params.city = result.city;
@@ -61,9 +61,18 @@ const Controller = (() => {
           updateUI();
         })
         .catch(() => {
-          UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^');
+          UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^', 3);
+          UI.clearInfo(2);
         });
     }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(geoSuccess, geoFail);
+    } else {
+      UI.clearInfo(3);
+      UI.alert('warning', 'Sorry, I can not locate you, search your city below ... ^O^', 6);
+    }
+
   };
 
   const init = () => {
@@ -87,7 +96,7 @@ const Controller = (() => {
       params.currentLocation = false;
       params.city = UI.getCity();
       if (params.city.length === 0) {
-        UI.alert('warning', 'Please input a valid City Name!');
+        UI.alert('warning', 'Please input a valid City Name!', 3);
       } else {
         UI.showInfo(`Loading ${params.city}'s weather ...`);
         params.unit = tempUnitC.checked ? 'C' : 'F';

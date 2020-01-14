@@ -2,12 +2,13 @@
 
 import Validate from './util/validate';
 import Image from './util/image';
+import { timeout } from 'd3';
 
 const UI = (() => {
   const infoBar = document.getElementById('info-bar');
   const alertBar = document.getElementById('alert-bar');
 
-  const alert = (type, msg) => {
+  const alert = (type, msg, time = 5) => {
     const alertClass = `alert-${type}`;
     alertBar.innerHTML = `
       <div id=${alertClass} class="alert ${alertClass} alert-dismissible fade show text-capitalize" role="alert">
@@ -16,6 +17,10 @@ const UI = (() => {
           <span aria-hidden="true">&times;</span>
         </button>
       </div>`;
+
+    setTimeout(() => {
+      alertBar.innerHTML = '';
+    }, time * 1000);
   };
 
   const getCity = () => {

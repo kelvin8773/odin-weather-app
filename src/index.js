@@ -64,7 +64,7 @@ const Controller = (() => {
           UI.alert('warning', 'Can\'t Load your City, Search Below Instead ... ^_^', 3);
           UI.clearInfo(2);
         });
-    }
+    };
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(geoSuccess, geoFail);

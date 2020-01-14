@@ -2,6 +2,7 @@
 
 import Validate from './util/validate';
 import Image from './util/image';
+
 const Suggestions = require('suggestions');
 
 const UI = (() => {
@@ -118,16 +119,14 @@ const UI = (() => {
   };
 
   const citiesSuggestion = (data) => {
-    new Suggestions(searchInput, data, {
+    const typeHead = new Suggestions(searchInput, data, {
       minLength: 2,
       limit: 3,
-      render: (item) => {
-        return `${item.name}, ${item.country}`
-      },
+      render: (item) => `${item.name}, ${item.country}`,
       getItemValue: (item) => item.name,
     });
-
-  }
+    return typeHead;
+  };
 
   return {
     alert,

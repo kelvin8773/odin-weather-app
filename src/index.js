@@ -18,7 +18,6 @@ const Controller = (() => {
     language: 'en',
   };
 
-  const searchInput = document.getElementById('search-input');
   const searchForm = document.forms.search;
   const tempUnitC = document.getElementById('unit-c');
   const tempUnitF = document.getElementById('unit-f');
@@ -74,12 +73,11 @@ const Controller = (() => {
       UI.clearInfo(3);
       UI.alert('warning', 'Sorry, I can not locate you, search your city below ... ^O^', 6);
     }
-
   };
 
   const init = () => {
     Data.getCities()
-      .then(data => {
+      .then((data) => {
         UI.citiesSuggestion(data);
       });
 
@@ -115,7 +113,6 @@ const Controller = (() => {
       }
       event.preventDefault();
     });
-
   };
 
   return {

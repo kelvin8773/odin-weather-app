@@ -1,8 +1,8 @@
 /* eslint-env browser */
 
+import * as d3 from 'd3';
 import Weather from './util/weather_api';
 import DateFns from './util/date_fns';
-import * as d3 from 'd3';
 
 const Data = (() => {
   const processToday = (data) => {
@@ -71,9 +71,9 @@ const Data = (() => {
   };
 
   const getCities = async () => {
-    const data = await d3.csv("./assets/data/world-cities.csv");
+    const data = await d3.csv('./assets/data/world-cities.csv');
     return data;
-  }
+  };
 
   return {
     getWeather,

@@ -122,8 +122,8 @@ const UI = (() => {
     const typeHead = new Suggestions(searchInput, data, {
       minLength: 2,
       limit: 3,
-      render: (item) => `${item.name}, ${item.country}`,
-      getItemValue: (item) => item.name,
+      render: item => `${item.name}, ${item.country}`,
+      getItemValue: item => item.name,
     });
     return typeHead;
   };

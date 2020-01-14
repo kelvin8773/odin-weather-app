@@ -2,7 +2,6 @@
 
 import Validate from './util/validate';
 import Image from './util/image';
-import { timeout } from 'd3';
 
 const UI = (() => {
   const infoBar = document.getElementById('info-bar');

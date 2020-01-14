@@ -44,12 +44,12 @@ const Controller = (() => {
   };
 
   const updateLocation = () => {
-    const geoSuccess = pos => {
+    const geoSuccess = (pos) => {
       params.currentLocation = true;
       params.latitude = pos.coords.latitude.toFixed(2);
       params.longitude = pos.coords.longitude.toFixed(2);
       updateUI();
-    }
+    };
 
     const geoFail = () => {
       IpLocation.query()

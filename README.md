@@ -9,11 +9,11 @@
  </p>
 
 
-> This is an [Odin Project Assignment](https://www.theodinproject.com/courses/javascript/lessons/weather-app) for mastering promise, Async and await key concepts in JavaScript.
+> This is an [Odin Project Assignment](https://www.theodinproject.com/courses/javascript/lessons/weather-app) for mastering some key concepts in JavaScript - Such as Promise, Async/Await, API, JSON.
 
 ![Weather App ScreenShoot](./docs/weather-app.jpg)
 
-* Please Note - Beside project requirement, I added polished UI and additional functionalities to make this project close to real world application.
+* Please Note - Beside the project requirement, I added more functionalities & handcrafted UI to make this assignment more close to a real world project. 
 
 ## 📣 Introduction
 

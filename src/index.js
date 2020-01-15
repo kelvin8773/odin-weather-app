@@ -111,9 +111,7 @@ const Controller = (() => {
         UI.alert('warning', 'Please input a valid City Name!', 3);
       } else {
         UI.showInfo(`Loading ${params.city}'s weather ...`);
-        console.log(tempUnitC.classList.value);
         params.unit = (tempUnitC.classList.value === 'unit-selected') ? 'C' : 'F';
-        console.log(params);
         updateUI();
       }
       event.preventDefault();

@@ -29,6 +29,7 @@ const Controller = (() => {
         .then((weather) => {
           if (weather.cod === '200') {
             params.city = weather.city;
+            params.cityId = weather.city_id;
             params.latitude = weather.latitude;
             params.longitude = weather.longitude;
             UI.updateNow(weather);
@@ -89,7 +90,7 @@ const Controller = (() => {
       UI.showInfo(`Updating ${params.city} ...`);
       tempUnitC.classList = 'unit-selected';
       tempUnitF.classList = 'unit-not-selected';
-      params.currentLocation = false;
+      // params.currentLocation = false;
       params.unit = 'C';
       updateUI();
     });
@@ -98,7 +99,7 @@ const Controller = (() => {
       UI.showInfo(`Updating ${params.city} ...`);
       tempUnitF.classList = 'unit-selected';
       tempUnitC.classList = 'unit-not-selected';
-      params.currentLocation = false;
+      // params.currentLocation = false;
       params.unit = 'F';
       updateUI();
     });
@@ -110,7 +111,9 @@ const Controller = (() => {
         UI.alert('warning', 'Please input a valid City Name!', 3);
       } else {
         UI.showInfo(`Loading ${params.city}'s weather ...`);
-        params.unit = tempUnitC.checked ? 'C' : 'F';
+        console.log(tempUnitC.classList.value);
+        params.unit = (tempUnitC.classList.value === 'unit-selected') ? 'C' : 'F';
+        console.log(params);
         updateUI();
       }
       event.preventDefault();

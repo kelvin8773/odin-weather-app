@@ -35,11 +35,13 @@ I build this application by using following tech stacks:
 * Webpack 4
 
 Finally, following resources have been utilized to help build this app:
-#### Resources
+#### Resources & Credit
 * [OpenWeather API](https://openweathermap.org/) provide realtime weather Data;
 * [unsplash.com](https://unsplash.com/) offer free and beautiful background image for various weather condition.
 * [date-fns package](https://date-fns.org/) make datetime data more accessible for end User.
 * [D3.js package](https://d3js.org/) give quickly load big csv data into memory feature;
+* [Suggestion package](https://github.com/tristen/suggestions) give suggestion while inputting;
+* [DataHub World Cities DataSet](https://datahub.io/core/world-cities) provide free world cities data-set;
 * [Real Favicon Generator](https://realfavicongenerator.net/) help generate Favicon for this project.
 
 ## ✨ Live Demo ✨
@@ -83,6 +85,8 @@ npm run watch
 ```
 
 > Please Note - Once you are ready to deploy the project into production environment, you can run `npm build` to produce the production ready files (under `./dist` folder).
+
+> And you do need to acquire your own API Keys (from above resources if needed) for development.
 
 
 ## 🤝 Contributing

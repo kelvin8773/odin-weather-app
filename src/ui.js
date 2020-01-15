@@ -1,6 +1,5 @@
 /* eslint-env browser */
 
-import Validate from './util/validate';
 import Image from './util/image';
 
 const Suggestions = require('suggestions');
@@ -27,14 +26,11 @@ const UI = (() => {
   };
 
   const getCity = () => {
-    let city = '';
-
-    if (Validate.check(searchInput.value, 'city')) {
-      city = searchInput.value;
-    }
-
+    const input = searchInput.value;
+    const city = input.split(',')[0];
+    const cityId = input.split(',')[1].match(/\((.*)\)/)[1];
     searchForm.reset();
-    return city;
+    return [city, cityId];
   };
 
   const updateNow = (data) => {
@@ -120,10 +116,10 @@ const UI = (() => {
 
   const citiesSuggestion = (data) => {
     const typeHead = new Suggestions(searchInput, data, {
-      minLength: 2,
-      limit: 3,
-      render: item => `${item.name}, ${item.country}`,
-      getItemValue: item => item.name,
+      minLength: 1,
+      limit: 5,
+      render: item => `${item.name}, ${item.country} (${item.geonameid})`,
+      getItemValue: item => `${item.name}, ${item.country} (${item.geonameid})`,
     });
     return typeHead;
   };

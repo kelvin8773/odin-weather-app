@@ -10,7 +10,7 @@ const Weather = (() => {
     const TODAY_QUERY = 'weather?';
     const FORECAST_QUERY = 'forecast?';
 
-    const GET_BY_CITY = `q=${params.city}`;
+    const GET_BY_CITY = params.cityId === undefined ? `q=${params.city}` : `id=${params.cityId}`;
     const GET_BY_COORDS = `lat=${params.latitude}&lon=${params.longitude}`;
 
     const queryString = params.currentLocation ? GET_BY_COORDS : GET_BY_CITY;

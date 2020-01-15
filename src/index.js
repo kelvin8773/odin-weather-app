@@ -11,6 +11,7 @@ import './scss/style.scss';
 const Controller = (() => {
   const params = {
     city: '',
+    cityId: '',
     unit: 'C',
     currentLocation: false,
     latitude: '',
@@ -92,6 +93,7 @@ const Controller = (() => {
       params.unit = 'C';
       updateUI();
     });
+
     tempUnitF.addEventListener('click', () => {
       UI.showInfo(`Updating ${params.city} ...`);
       tempUnitF.classList = 'unit-selected';
@@ -103,8 +105,8 @@ const Controller = (() => {
 
     searchForm.addEventListener('submit', (event) => {
       params.currentLocation = false;
-      params.city = UI.getCity();
-      if (params.city.length === 0) {
+      [params.city, params.cityId] = UI.getCity();
+      if (params.city === undefined) {
         UI.alert('warning', 'Please input a valid City Name!', 3);
       } else {
         UI.showInfo(`Loading ${params.city}'s weather ...`);

@@ -46,8 +46,7 @@ Finally, following resources have been utilized to help build this app:
 
 ## ✨ Live Demo ✨
 
-[Githack Host](https://rawcdn.githack.com/kelvin8773/odin-weather-app/baef2abcb3c4a4ae6223ae8db6d25ed09554d5e2/dist/index.html)
-
+[Github Host](https://kelvin8773.github.io/odin-weather-app/)
 
 ## 🍩 Run Locally
 Clone the project to your local machine and following following steps.

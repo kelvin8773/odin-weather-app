@@ -5,121 +5,139 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="//cdn.materialdesignicons.com/4.7.95/css/materialdesignicons.min.css">
+
+  <!-- favicon loader start -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <!-- favicon loader end -->
 
   <title>Weather App</title>
 </head>
 
 <body>
-  <div class="container">
-    <div id="alert-bar" class="my-3">
+  <div id="main" class="container d-flex flex-column align-items-center">
+    <div id="alert-bar" class="mt-3 mx-5 text-center">
     </div>
 
-    <h1 class="my-5 text-center">Weather App</h1>
-
-    <div id="main" class="container d-flex flex-column align-items-center">
-
-      <form name="search" class="input-group mb-5">
-        <input id="search-input" type="text" class="form-control" placeholder="Search your City here ...">
-        <div class="input-group-append">
-          <button type="submit" id="search-btn" class="btn btn-secondary" type="button">
-            <i class="mdi mdi-16px mdi-magnify"></i>
-          </button>
-        </div>
-      </form>
-
-
-      <div class="" id="page-content">
-        <!--weather card-->
-        <div class="card card-weather">
-          <div class="card-body">
-            <div class="weather-date-location">
-              <h3 name="weather-current-weekday">Friday</h3>
-              <p class="text-gray mb-0">
-                <span name="weather-date" class="weather-date">24 December, 2019</span>
-                <span name="weather-location" class="weather-location ml-2">Sydney, AU</span>
-              </p>
-            </div>
-            <div class="weather-data d-flex flex-column">
-              <div class="mr-auto">
-                <div class="d-flex align-items-end">
-                  <img name="weather-icon-now" class="weather-icon-now"
-                    src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather-icon-now">
-                  <h4 name="weather-temperature" class="display-3">18 <span class="symbol">°</span>C
-                  </h4>
-                </div>
-
-                <h6 name="weather-temperature-feel"> Feel Like 14 <span class="symbol">°</span>C </h6>
-                <p name="weather-description" class="text-capitalize">overcast clouds</p>
-              </div>
-
-              <div name="weather-detail-data" class="d-flex justify-content-around">
-                <div>
-                  <h6 class="text-light font-weight-bolder">Wind</h6>
-                  <h2 name="weather-wind" class="text-gray">18</h2>
-                  <p class="text-gray">M/S</p>
-                </div>
-
-                <div>
-                  <h6 class="text-light font-weight-bolder">Clouds</h6>
-                  <h2 name="weather-clouds" class="text-gray">90</h2>
-                  <p class="text-gray">%</p>
-                </div>
-
-                <div>
-                  <h6 class="text-light font-weight-bolder">Humidity</h6>
-                  <h2 name="weather-humidity" class="text-gray">60</h2>
-                  <p class="text-gray">%</p>
-                </div>
-
-                <div>
-                  <h6 class="text-light font-weight-bolder">Pressure</h6>
-                  <h2 name="weather-pressure" class="text-gray">1260</h2>
-                  <p class="text-gray">hPa</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="card-body p-0">
-            <div name="weekly-weather" class="d-flex weekly-weather">
-              <div class="weekly-weather-item">
-                <p class="mb-0"> Today </p>
-                <img src="http://openweathermap.org/img/wn/10d.png" alt="weather-icon">
-                <p class="mb-0"> 30° </p>
-              </div>
-              <div class="weekly-weather-item">
-                <p class="mb-1"> Tomorrow </p>
-                <img src="http://openweathermap.org/img/wn/01d.png" alt="weather-icon">
-                <p class="mb-0"> 31° </p>
-              </div>
-              <div class="weekly-weather-item">
-                <p class="mb-1"> Tue </p>
-                <img src="http://openweathermap.org/img/wn/02d.png" alt="weather-icon">
-                <p class="mb-0"> 28° </p>
-              </div>
-              <div class="weekly-weather-item">
-                <p class="mb-1"> Wed </p>
-                <img src="http://openweathermap.org/img/wn/03n.png" alt="weather-icon">
-                <p class="mb-0"> 30° </p>
-              </div>
-              <div class="weekly-weather-item">
-                <p class="mb-1"> Thu </p>
-                <img src="http://openweathermap.org/img/wn/09d.png" alt="weather-icon">
-                <p class="mb-0"> 29° </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!--weather card ends-->
+    <form id="search-form" name="search" class="input-group my-3">
+      <div class="d-flex flex-column input-search">
+        <input id="search-input" type="text" class="form-control p-2 text-center"
+          placeholder="Search your City here ..." autocomplete="off">
       </div>
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="submit">
+          Search
+        </button>
+      </div>
+    </form>
+
+    <div id="info-bar" class="mb-2">
+    </div>
+
+    <div class="shadow mb-5" id="page-content">
+      <div class="card card-weather">
+        <div name="weather-now-card" class="card-body text-night-color">
+          <div id="unit-group" class="text-right">
+            <span id="unit-c" class="unit-selected">C°</span>
+            /
+            <span id="unit-f" class="unit-not-selected">F°</span>
+          </div>
+
+          <div class="weather-date-location">
+            <div class="d-flex justify-content-start align-items-end">
+              <h1 name="weather-city" class="mr-2 mb-1">Sydney</h1>
+              <h5 name="weather-country">AU</h5>
+            </div>
+            <p class="mb-5">
+              <span name="weather-current-weekday" class="mr-1">Friday,</span>
+              <span name="weather-date" class="weather-date">24 December, 2019</span>
+            </p>
+          </div>
+
+          <div class="weather-data d-flex flex-column">
+            <div class="mr-auto">
+              <h4 name="weather-temperature" class="display-3">18 <span class="symbol">°</span>C
+              </h4>
+
+              <h6 name="weather-temperature-feel"> Feel Like 14 <span class="symbol">°</span>C
+              </h6>
+              <h3 name="weather-description" class="text-capitalize my-3">overcast clouds</h3>
+            </div>
+
+            <div name="weather-detail-data" class="d-flex justify-content-around">
+              <div>
+                <h6 class="font-weight-bolder">Wind</h6>
+                <h2 name="weather-wind">18</h2>
+                <p name="wind-unit">M/S</p>
+              </div>
+
+              <div>
+                <h6 class="font-weight-bolder">Clouds</h6>
+                <h2 name="weather-clouds">90</h2>
+                <p>%</p>
+              </div>
+
+              <div>
+                <h6 class="font-weight-bolder">Humidity</h6>
+                <h2 name="weather-humidity">60</h2>
+                <p>%</p>
+              </div>
+
+              <div>
+                <h6 class="font-weight-bolder">Pressure</h6>
+                <h2 name="weather-pressure">1260</h2>
+                <p>hPa</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div name="weather-forecast-card" class="card-body p-0">
+          <div name="weekly-weather" class="d-flex weekly-weather">
+            <div class="weekly-weather-item">
+              <p class="mb-0"> Today </p>
+              <img src="https://openweathermap.org/img/wn/10d.png" alt="weather-icon">
+              <p class="mb-0"> 30° </p>
+            </div>
+            <div class="weekly-weather-item">
+              <p class="mb-1"> Tomorrow </p>
+              <img src="https://openweathermap.org/img/wn/01d.png" alt="weather-icon">
+              <p class="mb-0"> 31° </p>
+            </div>
+            <div class="weekly-weather-item">
+              <p class="mb-1"> Tue </p>
+              <img src="https://openweathermap.org/img/wn/02d.png" alt="weather-icon">
+              <p class="mb-0"> 28° </p>
+            </div>
+            <div class="weekly-weather-item">
+              <p class="mb-1"> Wed </p>
+              <img src="https://openweathermap.org/img/wn/03n.png" alt="weather-icon">
+              <p class="mb-0"> 30° </p>
+            </div>
+            <div class="weekly-weather-item">
+              <p class="mb-1"> Thu </p>
+              <img src="https://openweathermap.org/img/wn/09d.png" alt="weather-icon">
+              <p class="mb-0"> 29° </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <script src="main.js"></script>
+  <footer class="text-capitalize text-center font-weight-light">
+    <p class="mb-1"> Made by <a href="https://twitter.com/Kelvin9877">Kelvin Liang</a> @2020 with ❤️</p>
+    <small class="font-italic"> All right Reserved.</small>
+  </footer>
 
+  <script src="main.js"></script>
 </body>
 
 </html>

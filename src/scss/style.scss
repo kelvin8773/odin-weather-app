@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
 
-// @import '@mdi/font/scss/materialdesignicons';
 
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
@@ -23,8 +22,9 @@ p {
   font-size: 16px
 }
 
+
 .input-group {
-  width: 440px;
+  width: 480px;
 }
 
 .card-weather {
@@ -37,14 +37,8 @@ p {
 }
 
 .card-weather .card-body:first-child {
-  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1557323760/weather.svg) no-repeat center;
-  background-size: cover
-}
-
-.text-gray,
-.card-subtitle,
-.new-accounts ul.chats li.chat-persons a p.joined-date {
-  color: #969696
+  background: url("../assets/image/rain_night.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .card-weather .card-body {
@@ -63,17 +57,51 @@ p {
   text-align: center
 }
 
-.card-weather .weekly-weather .weekly-weather-item i {
-  font-size: 1.4rem
-}
 
 .display-3 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 56px;
-  font-weight: 900;
-  color: gray;
+  font-size: 52px;
+  font-weight: 600;
 }
 
 .weather-icon-now {
   width: 140px;
+}
+
+.input-group {
+  width: 480px;
+}
+
+.input-search {
+  width: 410px;
+}
+
+.input-group-append {
+  height: 38px;
+}
+
+.text-day-color {
+  color: rgb(195, 195, 195);
+}
+
+.text-night-color {
+  color: #f2f2f2;
+}
+
+#unit-group {
+  font-size: 1.3rem;
+}
+
+.unit-selected {
+  color: rgb(162, 170, 86);
+  font-weight: 600;
+}
+
+.unit-not-selected {
+  font-weight: 500;
+}
+
+.unit-not-selected:hover {
+  color: rgb(173, 32, 32);
+  cursor: pointer;
 }

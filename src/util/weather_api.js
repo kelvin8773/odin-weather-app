@@ -1,28 +1,32 @@
+import fetchData from './fetch_api';
+
 const Weather = (() => {
-  const fetchData = async (input, unit, days) => {
-    let city = '';
-    const BASE_URL = 'https://api.openweathermap.org/data/2.5/';
-    const UNIT_METRIC = '&units=metric';
-    const UNIT_IMPERIAL = '&units=imperial';
-    const API = `&appid=${process.env.OPEN_WEATHER_API_KEY}`;
-    let unitString = UNIT_METRIC;
+  const BASE_URL = 'https://api.openweathermap.org/data/2.5/';
+  const UNIT_METRIC = '&units=metric';
+  const UNIT_IMPERIAL = '&units=imperial';
+  const API = `&appid=${process.env.OPEN_WEATHER_API_KEY}`;
 
-    if (input) city = input;
+  const getWeatherData = async (params) => {
+    const TODAY_QUERY = 'weather?';
+    const FORECAST_QUERY = 'forecast?';
 
-    const GET_TODAY = `weather?q=${city}`;
-    const GET_5DAYS = `forecast?q=${city}`;
+    const GET_BY_CITY = `q=${params.city}`;
+    const GET_BY_COORDS = `lat=${params.latitude}&lon=${params.longitude}`;
 
-    let queryString = GET_TODAY;
-    if (days === 5) queryString = GET_5DAYS;
-    if (unit === 'F') unitString = UNIT_IMPERIAL;
-    const url = BASE_URL + queryString + unitString + API;
+    const queryString = params.currentLocation ? GET_BY_COORDS : GET_BY_CITY;
+    const unitString = (params.unit === 'C') ? UNIT_METRIC : UNIT_IMPERIAL;
+    const lanString = `&lang=${params.language}`;
 
-    const response = await fetch(url, { mode: 'cors' });
-    return response.json();
+    const todayURL = BASE_URL + TODAY_QUERY + queryString + unitString + lanString + API;
+    const forecastURL = BASE_URL + FORECAST_QUERY + queryString + unitString + lanString + API;
+
+    const today = await fetchData(todayURL);
+    const forecast = await fetchData(forecastURL);
+    return [today, forecast];
   };
 
   return {
-    fetchData,
+    getWeatherData,
   };
 })();
 

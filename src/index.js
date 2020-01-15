@@ -103,21 +103,7 @@ const Controller = (() => {
       updateUI();
     });
 
-    // searchForm.addEventListener('submit', (event) => {
-    //   params.currentLocation = false;
-    //   [params.city, params.cityId] = UI.getCity();
-    //   console.log(params);
-    //   if (params.city.length === 0) {
-    //     UI.alert('warning', 'Please input a valid City Name!', 3);
-    //   } else {
-    //     UI.showInfo(`Loading ${params.city}'s weather ...`);
-    //     params.unit = tempUnitC.checked ? 'C' : 'F';
-    //     updateUI();
-    //   }
-    //   event.preventDefault();
-    // });
-
-    document.getElementById("search-button").addEventListener('click', () => {
+    searchForm.addEventListener('submit', (event) => {
       params.currentLocation = false;
       [params.city, params.cityId] = UI.getCity();
       if (params.city === undefined) {
@@ -127,8 +113,8 @@ const Controller = (() => {
         params.unit = tempUnitC.checked ? 'C' : 'F';
         updateUI();
       }
+      event.preventDefault();
     });
-
   };
 
   return {

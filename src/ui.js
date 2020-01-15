@@ -118,8 +118,8 @@ const UI = (() => {
     const typeHead = new Suggestions(searchInput, data, {
       minLength: 1,
       limit: 5,
-      render: (item) => `${item.name}, ${item.country} (${item.geonameid})`,
-      getItemValue: (item) => `${item.name}, ${item.country} (${item.geonameid})`,
+      render: item => `${item.name}, ${item.country} (${item.geonameid})`,
+      getItemValue: item => `${item.name}, ${item.country} (${item.geonameid})`,
     });
     return typeHead;
   };

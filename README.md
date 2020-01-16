@@ -8,6 +8,7 @@
   </a>
  </p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d0af763b-1d2e-4c9e-82d9-2ca9419d11c4/deploy-status)](https://app.netlify.com/sites/my-weather-now/deploys)
 
 > This is an [Odin Project Assignment](https://www.theodinproject.com/courses/javascript/lessons/weather-app) for mastering some key concepts in JavaScript - Such as Promise, Async/Await, API, JSON.
 
@@ -46,7 +47,7 @@ Finally, following resources have been utilized to help build this app:
 
 ## ✨ Live Demo ✨
 
-[Github Host](https://kelvin8773.github.io/odin-weather-app/)
+* [Netlify Host](https://my-weather-now.netlify.com/);
 
 ## 🍩 Run Locally
 Clone the project to your local machine and following following steps.

@@ -63,7 +63,7 @@ const UI = (() => {
 
     const weatherNowCard = document.getElementById('weather-now-card');
     const weatherImg = Image.getWeatherImg(data.weather_id, data.night);
-    weatherNowCard.setAttribute("style",
+    weatherNowCard.setAttribute('style',
       `
       background: 
       linear-gradient(to right, rgba(67, 66, 66, 0.5), rgba(200, 200, 200, 0.5),rgba(67, 66, 66, 0.5)),

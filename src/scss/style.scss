@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
 @import 'suggestions';
 
+$font-border-black: rgba(#000000, 0.88);
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 20px;
@@ -36,9 +38,16 @@ p {
   background-image: linear-gradient(to left bottom, #d6eef6, #dff0fa, #e7f3fc, #eff6fe, #f6f9ff)
 }
 
-.card-weather .card-body:first-child {
-  background: url("../assets/image/rain_night.jpg") no-repeat center;
+
+#weather-now-card {
+  background: no-repeat center;
+  background-image: url("../assets/image/rain_night.jpg");
   background-size: cover;
+
+  * {
+    text-shadow:
+      0.8px 0.1px $font-border-black;
+  }
 }
 
 .card-weather .card-body {

@@ -40,14 +40,10 @@ p {
 
 
 #weather-now-card {
-  background: no-repeat center;
-  background-image: url("../assets/image/rain_night.jpg");
+  background:
+    linear-gradient(to right, rgba(67, 66, 66, 0.5), rgba(200, 200, 200, 0.5), rgba(67, 66, 66, 0.5)),
+    url('../assets/image/rain_night.jpg') no-repeat center;
   background-size: cover;
-
-  * {
-    text-shadow:
-      0.8px 0.1px $font-border-black;
-  }
 }
 
 .card-weather .card-body {
@@ -94,7 +90,7 @@ p {
 }
 
 .text-night-color {
-  color: #f2f2f2;
+  color: #e4e3e3;
 }
 
 #unit-group {
@@ -102,7 +98,7 @@ p {
 }
 
 .unit-selected {
-  color: rgb(162, 170, 86);
+  color: rgba(217, 228, 122, 0.4);
   font-weight: 600;
 }
 

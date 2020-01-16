@@ -90,7 +90,6 @@ const Controller = (() => {
       UI.showInfo(`Updating ${params.city} ...`);
       tempUnitC.classList = 'unit-selected';
       tempUnitF.classList = 'unit-not-selected';
-      // params.currentLocation = false;
       params.unit = 'C';
       updateUI();
     });
@@ -99,7 +98,6 @@ const Controller = (() => {
       UI.showInfo(`Updating ${params.city} ...`);
       tempUnitF.classList = 'unit-selected';
       tempUnitC.classList = 'unit-not-selected';
-      // params.currentLocation = false;
       params.unit = 'F';
       updateUI();
     });

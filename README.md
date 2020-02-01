@@ -6,9 +6,14 @@
   <a href="https://github.com/kelvin8773/odin-weather-app/blob/master/LICENSE" target="_blank">
       <img alt="GitHub" src="https://img.shields.io/github/license/kelvin8773/odin-weather-app">
   </a>
+
+   <a href="https://app.netlify.com/sites/my-weather-now/deploys" target="_blank">
+      <img alt="Netlify Deploy" src="https://api.netlify.com/api/v1/badges/d0af763b-1d2e-4c9e-82d9-2ca9419d11c4/deploy-status">
+  </a>
+  
  </p>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d0af763b-1d2e-4c9e-82d9-2ca9419d11c4/deploy-status)](https://app.netlify.com/sites/my-weather-now/deploys)
+
 
 > This is an [Odin Project Assignment](https://www.theodinproject.com/courses/javascript/lessons/weather-app) for mastering some key concepts in JavaScript - Such as Promise, Async/Await, API, JSON.
 

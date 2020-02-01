@@ -61,9 +61,15 @@ const UI = (() => {
     weatherDescription.innerText = data.description;
 
 
-    const weatherNowCard = document.getElementsByName('weather-now-card')[0];
+    const weatherNowCard = document.getElementById('weather-now-card');
     const weatherImg = Image.getWeatherImg(data.weather_id, data.night);
-    weatherNowCard.style.backgroundImage = `url(${weatherImg})`;
+    weatherNowCard.setAttribute('style',
+      `
+      background: 
+      linear-gradient(to right, rgba(67, 66, 66, 0.5), rgba(200, 200, 200, 0.5),rgba(67, 66, 66, 0.5)),
+      url(${weatherImg}) no-repeat center; 
+      background-size: cover;
+    `);
 
     if (data.night) {
       weatherNowCard.classList.add('text-night-color');

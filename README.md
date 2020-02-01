@@ -97,7 +97,7 @@ npm run watch
 ## 🤝 Contributing
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kelvin8773/odin-todo-list/issues).
+Feel free to check the [issues page](https://github.com/kelvin8773/odin-weather-app/issues).
 
 ## 👋 Show your support
 

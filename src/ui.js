@@ -112,8 +112,8 @@ const UI = (() => {
     const infoSpinner = document.createElement('span');
 
     infoContent.innerText = msg;
-    infoSpinner.innerHTML =
-      `<div class="spinner-border text-warning" role="status">
+    infoSpinner.innerHTML = `
+      <div class="spinner-border text-warning" role="status">
           <span class="sr-only">Loading...</span>
       </div>`;
     infoSpinner.setAttribute('Class', 'ml-3');

@@ -1,0 +1,194 @@
+$app-width: 480px;
+
+@include phone {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+#app-header {
+  margin: 4vh 0 4vh 0;
+  height: 10vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  #alert-bar {
+    margin: 15px auto;
+  }
+
+  #search-form {
+    margin: 0 auto;
+    width: $app-width;
+    position: relative;
+
+    input {
+      text-align: center;
+      width: 100%;
+      border: 0px;
+      border-bottom: 1.5px solid lightblue;
+      padding: 10px;
+      outline: none;
+      opacity: 50%;
+    }
+
+    input:focus {
+      font-size: 1.6rem;
+    }
+  }
+
+  #info-bar {
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  @include phone {
+    margin: 0;
+
+    #search-form {
+      width: 100vw;
+      height: 10vh;
+
+      input {
+        height: 100%;
+        border: 0px;
+      }
+
+      input:focus {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+}
+
+#app-content {
+  #weather-card {
+    margin: 0 auto;
+    -webkit-box-shadow: 1px 2px 17px -6px rgba(0, 0, 0, 0.46);
+    box-shadow: 1px 2px 17px -6px rgba(0, 0, 0, 0.46);
+    width: $app-width;
+
+
+    .text-day-color {
+      color: rgb(195, 195, 195);
+    }
+
+    .text-night-color {
+      color: #e4e3e3;
+    }
+
+    #weather-now-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        linear-gradient(to right, rgba(67, 66, 66, 0.5), rgba(200, 200, 200, 0.5), rgba(67, 66, 66, 0.5)),
+        url('../assets/image/rain_night.jpg') no-repeat center;
+      background-size: cover;
+      padding: 25px;
+
+      #weather-data {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+      }
+
+      #unit-group {
+        font-size: 1.3rem;
+      }
+
+      .unit-selected {
+        color: rgba(217, 228, 122, 0.4);
+        font-weight: 600;
+      }
+
+      .unit-not-selected {
+        font-weight: 500;
+      }
+
+      .unit-not-selected:hover {
+        color: rgb(173, 32, 32);
+        cursor: pointer;
+      }
+
+    }
+
+    #weather-forecast-card {
+      background: #ffffff;
+
+      .weekly-weather-item {
+        width: $app-width/5;
+        border-right: 1px solid #f2f2f2;
+        padding: 1.5rem 0.7rem;
+        text-align: center;
+        font-size: 0.6rem;
+      }
+    }
+
+
+    @include phone {
+      width: 100vw;
+      height: 90vh;
+
+      #weather-now-card {
+        height: 70vh;
+      }
+
+      #weather-forecast-card {
+        height: 20vh;
+
+        .weekly-weather-item {
+          width: 20vw;
+          height: 20vh;
+          padding: 1rem 0.5rem;
+        }
+      }
+
+    }
+  }
+}
+
+#app-footer {
+  margin: 50px auto;
+  color: lightslategrey;
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    color: limegreen;
+    font-weight: 600;
+  }
+
+  @include phone {
+    display: none;
+  }
+
+}

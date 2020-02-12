@@ -1,111 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
+// @import './reset';
+@import './break_point';
 @import 'suggestions';
 
-$font-border-black: rgba(#000000, 0.88);
+@import './text';
+@import './color';
+@import './utilities';
+@import './custom';
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-  background-color: #f9f9fa
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Poppins",
-    sans-serif;
-  font-weight: 600
-}
-
-p {
-  font-size: 16px
-}
-
-
-.input-group {
-  width: 480px;
-}
-
-.card-weather {
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 480px;
-  max-width: 620px;
-  background: #e1ecff;
-  background-image: linear-gradient(to left bottom, #d6eef6, #dff0fa, #e7f3fc, #eff6fe, #f6f9ff)
-}
-
-#weather-now-card {
   background:
-    linear-gradient(to right, rgba(67, 66, 66, 0.5), rgba(200, 200, 200, 0.5), rgba(67, 66, 66, 0.5)),
-    url('../assets/image/rain_night.jpg') no-repeat center;
+    linear-gradient(45deg,
+      rgba(67, 66, 66, 0.5),
+      rgba(200, 200, 200, 0.5),
+      rgba(67, 66, 66, 0.5)),
+    url(../assets/image/blueSky-bg.jpg) center center no-repeat fixed;
   background-size: cover;
-}
-
-.card-weather .card-body {
-  background: #ffffff
-}
-
-.card-weather .weekly-weather {
-  background: #ffffff;
-  overflow-x: auto
-}
-
-.card-weather .weekly-weather .weekly-weather-item {
-  flex: 0 0 19.46%;
-  border-right: 1px solid #f2f2f2;
-  padding: 1rem;
-  text-align: center
-}
-
-
-.display-3 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 52px;
-  font-weight: 600;
-}
-
-.weather-icon-now {
-  width: 140px;
-}
-
-.input-group {
-  width: 480px;
-}
-
-.input-search {
-  width: 410px;
-}
-
-.input-group-append {
-  height: 38px;
-}
-
-.text-day-color {
-  color: rgb(195, 195, 195);
-}
-
-.text-night-color {
-  color: #e4e3e3;
-}
-
-#unit-group {
-  font-size: 1.3rem;
-}
-
-.unit-selected {
-  color: rgba(217, 228, 122, 0.4);
-  font-weight: 600;
-}
-
-.unit-not-selected {
-  font-weight: 500;
-}
-
-.unit-not-selected:hover {
-  color: rgb(173, 32, 32);
-  cursor: pointer;
 }

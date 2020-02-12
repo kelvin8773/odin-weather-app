@@ -20,8 +20,15 @@ const UI = (() => {
         </button>
       </div>`;
 
+    alertBar.setAttribute('class', 'display-block');
+    searchForm.setAttribute('class', 'display-none');
+
+
     setTimeout(() => {
       alertBar.innerHTML = '';
+      alertBar.setAttribute('class', 'display-none');
+      searchForm.setAttribute('class', 'display-block');
+
     }, time * 1000);
   };
 
@@ -105,25 +112,31 @@ const UI = (() => {
     const infoSpinner = document.createElement('span');
 
     infoContent.innerText = msg;
-    infoSpinner.innerHTML = `<div class="spinner-border text-warning" role="status">
-                                <span class="sr-only">Loading...</span>
-                            </div>`;
-    infoSpinner.setAttribute('Class', 'ml-5');
+    infoSpinner.innerHTML =
+      `<div class="spinner-border text-warning" role="status">
+          <span class="sr-only">Loading...</span>
+      </div>`;
+    infoSpinner.setAttribute('Class', 'ml-3');
 
     infoBar.append(infoContent);
     infoBar.append(infoSpinner);
+    searchForm.setAttribute('class', 'display-none');
+    infoBar.setAttribute('class', 'display-block');
+
   };
 
   const clearInfo = (time) => {
     setTimeout(() => {
       infoBar.innerHTML = '';
+      infoBar.setAttribute('class', 'display-none');
+      searchForm.setAttribute('class', 'display-block');
     }, time * 1000);
   };
 
   const citiesSuggestion = (data) => {
     const typeHead = new Suggestions(searchInput, data, {
       minLength: 1,
-      limit: 5,
+      limit: 10,
       render: item => `${item.name}, ${item.country} (${item.geonameid})`,
       getItemValue: item => `${item.name}, ${item.country} (${item.geonameid})`,
     });

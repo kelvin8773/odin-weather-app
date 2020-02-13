@@ -17,13 +17,11 @@
 
 > This is an [Odin Project Assignment](https://www.theodinproject.com/courses/javascript/lessons/weather-app) for mastering some key concepts in JavaScript - Such as Promise, Async/Await, API, JSON.
 
-![Weather App ScreenShoot](./docs/weather-app.jpg)
+![Weather App ScreenShoot](./docs/weather-showcase.jpg)
 
-* Please Note - Beside the project requirement, I added more functionalities & handcrafted UI to make this assignment more close to a real world project. 
 
 ## 📣 Introduction
 
-In this "Weather App" project, following key concepts in JavaScript has been used.
 #### Key Concepts 
 * Promise (then/catch)
 * Async/Await
@@ -32,15 +30,13 @@ In this "Weather App" project, following key concepts in JavaScript has been use
 * OOP (Object Oriented Programming)
 * MVC (Model-View-Controller)
 * Factory Function
-
-I build this application by using following tech stacks: 
+ 
 #### Tech Stacks
 * HTML5/CSS
 * Bootstrap 4
 * ESlint
 * Webpack 4
 
-Finally, following resources have been utilized to help build this app:
 #### Resources & Credit
 * [OpenWeather API](https://openweathermap.org/) provide realtime weather Data;
 * [unsplash.com](https://unsplash.com/) offer free and beautiful background image for various weather condition.

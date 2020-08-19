@@ -52,24 +52,24 @@
 ## 🍩 Run Locally
 Clone the project to your local machine and following following steps.
 
-> To Clone Project Locally.
+> Step 1. Clone project locally.
 ```bash
 git clone git@github.com:kelvin8773/odin-weather-app.git
 cd odin-to-do-list
 ```
-> To install dependencies
+> Step 2. Install dependencies
 ```bash
 npm install
 ```
-> To build the project
+> Step 3. Build the project
 ```bash
 npm build
 ```
-> To Run Locally
+> Step 4. run Locally
 ```bash
 npm start 
 ```
-> Open http://127.0.0.1:8080 using your favorite browser, if it doesn't open automatically.
+> Setp 5. Open http://127.0.0.1:8080 using your favorite browser, if it doesn't open automatically.
 
 ## ☕️ Development Mode 
 

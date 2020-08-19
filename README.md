@@ -12,16 +12,16 @@
 
 [![Weather App ScreenShoot](./docs/weather-showcase.jpg)](https://weather.kelvinliang.cn/)
 
-> Built with JavaScript, the app implements concepts such OOP(Object Oriented Programming), MVC (Model View Controllers) and factory functions.
+> Built with JavaScript, the app implements concepts such OOP (Object Oriented Programming), MVC (Model View Controllers) and factory functions.
 
-### ✨ [Demo Link](https://weather.kelvinliang.cn/);
+### ✨ [Demo Link](https://weather.kelvinliang.cn/)
 
 ### main features
-* auto location
-* weather forecast for next 5 days
-* world cities suggestion
+* Auto location
+* Weather forecast for next 5 days
+* World cities suggestion
 * Unit Switch (C/F)
-* real world city background picture
+* Real world city background picture
 * Fit to any screen
 * Elegant UI
 
